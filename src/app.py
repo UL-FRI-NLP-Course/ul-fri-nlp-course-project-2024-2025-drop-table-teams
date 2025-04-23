@@ -10,9 +10,11 @@ from fastapi.templating import Jinja2Templates
 from fastapi.middleware.cors import CORSMiddleware
 
 from src.chain_initialisation import init_chain
+from src.embedding_initialisation import init_embeddings
 from src.model_initialisation import init_model
 from src.models import ChatName, Question
 from src.pipeline_initialisation import init_pipeline
+from src.retriever_initialisation import init_retriever
 
 load_dotenv()
 HISTORY_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "chat_history"))
@@ -34,15 +36,17 @@ app.add_middleware(
 
 @app.on_event("startup")
 async def startup_event():
-    global model, model_name, pipeline, chain
+    global model, model_name, pipeline, chain, vectorstore, retriever
     print("Initializing model...")
     token = os.getenv("hf_token")
     if not token:
         raise RuntimeError("hf_token not found in .env")
     model, model_name = init_model(token)
-    pipeline = init_pipeline(model, model_name)
-    chain = init_chain(pipeline)
-
+    pipeline = init_pipeline(model=model, model_name=model_name)
+    vectorstore = init_embeddings()
+    retriever = init_retriever(vectorstore)
+    chain = init_chain(pipeline=pipeline, retriever=retriever)
+    print("Start-up complete.")
 
 
 @app.get("/", response_class=HTMLResponse)
@@ -67,9 +71,13 @@ async def get_chat(request: Request, chat_id: str):
 async def ask_question(payload: Question):
     chat_id = _get_current_chat_id()
     history = _load_chat_history(chat_id)
+    formatted_history = [(entry["question"], entry["answer"]) for entry in history]
 
     question = payload.question
-    answer = chain.invoke({"question": question}).split("Answer:")[-1].strip()
+    answer = chain.invoke(
+        {"question": question,
+         "chat_history": formatted_history}
+    )["answer"].split("### Answer:")[-1].strip()
 
     history.append({"question": question, "answer": answer})
     _save_chat_history(chat_id, history)
@@ -87,7 +95,7 @@ async def list_chats():
 
 
 @app.post("/change_chat")
-async def change_cha(new_chat: ChatName):
+async def change_chat(new_chat: ChatName):
     chat_name = new_chat.chat_name
     if not chat_name:
         raise HTTPException(status_code=422, detail="Chat name cannot be empty.")

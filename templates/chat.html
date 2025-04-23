@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>NLP Chat</title>
+  <title>Research helper</title>
   <style>
     body {
       margin: 0;
@@ -208,7 +208,7 @@
     <div class="chat-container">
       <div class="chat-name">
             <span id="chat-name-span"> {{ chat_id }}</span>
-            <span id="pen-icon" class="pen-icon" onclick="editChatName()">✏️</span>
+            <span id="pen-icon" class="pen-icon" onclick="editChatName()">🖉</span>
             <input type="text" id="edit-chat-name" class="edit-input" onkeydown="handleEnterKey(event)" />
         </div>
       <div class="chat-box" id="chat-box">
@@ -266,6 +266,7 @@
           input.disabled = false;
           sendButton.disabled = false;
           loadingIndicator.style.display = 'none';
+          await fetchChatList();
         }
 
         async function fetchChatList() {
