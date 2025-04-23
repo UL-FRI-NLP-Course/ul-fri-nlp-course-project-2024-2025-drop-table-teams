@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NLP Chat</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1b1f23;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+    }
+
+    h2 {
+      margin: 20px;
+      color: #b9fbc0;
+    }
+
+    .chat-container {
+      width: 100%;
+      max-width: 1300px;
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      box-sizing: border-box;
+    }
+
+    .chat-box {
+      flex: 1;
+      background-color: #2a2d32;
+      border-radius: 12px;
+      padding: 16px;
+      overflow-y: auto;
+      max-height: 80vh;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .bubble {
+      margin: 8px 0;
+      padding: 12px 16px;
+      border-radius: 16px;
+      max-width: 75%;
+      word-wrap: break-word;
+    }
+
+    .user {
+      background-color: #1d4d4f;
+      color: #e0ffe0;
+      margin-left: auto;
+      text-align: left;
+      align-self: flex-end;
+    }
+
+    .bot {
+      background-color: #3c3f45;
+      color: #f0f0f0;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    .input-area {
+      margin-top: 16px;
+      display: flex;
+      gap: 10px;
+    }
+
+    input {
+      flex: 1;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      background-color: #2a2d32;
+      color: #e0e0e0;
+      font-size: 16px;
+    }
+
+    input:focus {
+      outline: 2px solid #1d4d4f;
+    }
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      background-color: #1d4d4f;
+      color: #e0ffe0;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #24686b;
+    }
+
+    .app-layout {
+      display: flex;
+      height: 100vh;
+      width: 100%;
+    }
+
+    .sidebar {
+      background-color: #2a2d32;
+      width: 220px;
+      padding: 20px;
+      overflow-y: auto;
+      border-right: 1px solid #1d4d4f;
+    }
+
+    .sidebar h3 {
+      color: #b9fbc0;
+      margin-top: 0;
+    }
+
+    #chat-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #chat-list li {
+      padding: 10px;
+      background-color: #1d4d4f;
+      margin-bottom: 8px;
+      border-radius: 8px;
+      cursor: pointer;
+      color: #e0ffe0;
+      transition: background 0.2s ease;
+    }
+
+    #chat-list li:hover {
+      background-color: #24686b;
+    }
+
+    .chat-name {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .chat-name span {
+            margin-right: 10px;
+        }
+
+        .pen-icon {
+            cursor: pointer;
+            font-size: 18px;
+            color: #2a9d8f;
+        }
+
+        .pen-icon:hover {
+            color: #1d4d4f;
+        }
+
+        .edit-input {
+            display: none;
+            border: none;
+            background: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: #2a9d8f;
+            padding: 5px;
+        }
+
+        .edit-input.active {
+            display: block;
+        }
+
+         .loading-indicator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+      font-size: 18px;
+      color: #f0f0f0;
+    }
+
+    .spinner {
+      border: 4px solid #f0f0f0;
+      border-top: 4px solid #1d4d4f;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      animation: spin 1s linear infinite;
+      margin-right: 10px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-layout">
+    <div class="sidebar">
+    <h3>Chats</h3>
+    <ul id="chat-list">
+    </ul>
+</div>
+
+    <div class="chat-container">
+      <div class="chat-name">
+            <span id="chat-name-span"> {{ chat_id }}</span>
+            <span id="pen-icon" class="pen-icon" onclick="editChatName()">✏️</span>
+            <input type="text" id="edit-chat-name" class="edit-input" onkeydown="handleEnterKey(event)" />
+        </div>
+      <div class="chat-box" id="chat-box">
+        {% for entry in history %}
+          <div class="bubble user">{{ entry.question }}</div>
+          <div class="bubble bot">{{ entry.answer }}</div>
+        {% endfor %}
+      </div>
+      <div id="loading-indicator" class="loading-indicator" style="display: none;">
+        <div class="spinner"></div>
+        <span>Bot is typing...</span>
+      </div>
+      <div class="input-area">
+        <input type="text" id="question" placeholder="Ask about anything..." onkeydown="if(event.key==='Enter') ask()">
+        <button id="send-button" onclick="ask()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+        async function ask() {
+          const input = document.getElementById("question");
+          const chatBox = document.getElementById("chat-box");
+          const sendButton = document.getElementById("send-button");
+          const loadingIndicator = document.getElementById("loading-indicator");
+          const question = input.value.trim();
+          if (!question) return;
+
+          input.disabled = true;
+          sendButton.disabled = true;
+          loadingIndicator.style.display = 'flex';
+
+          const userBubble = document.createElement("div");
+          userBubble.className = "bubble user";
+          userBubble.textContent = question;
+          chatBox.appendChild(userBubble);
+
+          input.value = "";
+          chatBox.scrollTop = chatBox.scrollHeight;
+
+          const response = await fetch("/ask", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ question })
+          });
+          const data = await response.json();
+          const last = data.history[data.history.length - 1];
+
+          const botBubble = document.createElement("div");
+          botBubble.className = "bubble bot";
+          botBubble.textContent = last.answer;
+          chatBox.appendChild(botBubble);
+          chatBox.scrollTop = chatBox.scrollHeight;
+
+          input.disabled = false;
+          sendButton.disabled = false;
+          loadingIndicator.style.display = 'none';
+        }
+
+        async function fetchChatList() {
+                const res = await fetch("/chats");
+                const data = await res.json();
+                const list = document.getElementById("chat-list");
+                list.innerHTML = "";
+
+                data.chats.forEach(chatId => {
+                    const li = document.createElement("li");
+                    li.textContent = chatId;
+                    li.onclick = () => changeChat(chatId);
+                    list.appendChild(li);
+                });
+            }
+
+        async function changeChat(chatId) {
+          window.location.href = `/chat-${chatId}`;
+          await fetch("/change_chat", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({chat_name: chatId})
+          });
+        }
+
+        function editChatName() {
+        const chatNameSpan = document.getElementById('chat-name-span');
+        const editInput = document.getElementById('edit-chat-name');
+        const penIcon = document.getElementById('pen-icon');
+
+        chatNameSpan.style.display = 'none';
+        penIcon.style.display = 'none';
+        editInput.value = chatNameSpan.textContent;
+        editInput.style.display = 'block';
+        editInput.focus();
+    }
+
+    async function saveChatName() {
+        const newName = document.getElementById('edit-chat-name').value.trim();
+        if (!newName) return;
+
+        const res = await fetch("/change_chat_name", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ chat_name: newName }),
+        });
+
+        await res.json();
+
+        if (res.ok) {
+            document.getElementById('chat-name-span').textContent = newName;
+            document.getElementById('edit-chat-name').style.display = 'none';
+            document.getElementById('pen-icon').style.display = 'inline';
+            document.getElementById('chat-name-span').style.display = 'inline';
+            window.location.href = `/chat-${newName}`;
+        } else {
+            alert("Failed to update chat name.");
+        }
+    }
+
+    function handleEnterKey(event) {
+        if (event.key === 'Enter') {
+            saveChatName();
+        }
+    }
+
+    window.onload = () => {
+      fetchChatList();
+    };
+  </script>
+</body>
+</html>
