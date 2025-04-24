@@ -4,7 +4,7 @@ import torch
 import transformers
 
 
-def init_model(hf_token: str):
+def init_model(hf_token: str, cuda_enabled: bool):
     _hf_login(hf_token)
     model_name = "mistralai/Mistral-7B-Instruct-v0.2"
 
@@ -21,8 +21,8 @@ def init_model(hf_token: str):
     model = transformers.AutoModelForCausalLM.from_pretrained(
         pretrained_model_name_or_path=model_name,
         config=model_config,
-        quantization_config=bnb_config,  # we introduce the bnb config here.
-        device_map="auto",
+        quantization_config=bnb_config if cuda_enabled else None,
+        device_map="auto" if cuda_enabled else "cpu",
     )
 
     model.eval()

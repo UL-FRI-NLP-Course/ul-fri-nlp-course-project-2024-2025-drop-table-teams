@@ -19,6 +19,7 @@ from src.retriever_initialisation import init_retriever
 load_dotenv()
 HISTORY_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "chat_history"))
 os.makedirs(HISTORY_DIR, exist_ok=True)
+cuda_enabled = os.getenv("CUDA_ENABLED", "Y").lower() in ['true', 'yes', 'y']
 
 SESSION_FILE = os.path.join(HISTORY_DIR, "current_chat.txt")
 
@@ -41,9 +42,9 @@ async def startup_event():
     token = os.getenv("hf_token")
     if not token:
         raise RuntimeError("hf_token not found in .env")
-    model, model_name = init_model(token)
+    model, model_name = init_model(token, cuda_enabled)
     pipeline = init_pipeline(model=model, model_name=model_name)
-    vectorstore = init_embeddings()
+    vectorstore = init_embeddings(cuda_enabled)
     retriever = init_retriever(vectorstore)
     chain = init_chain(pipeline=pipeline, retriever=retriever)
     print("Start-up complete.")

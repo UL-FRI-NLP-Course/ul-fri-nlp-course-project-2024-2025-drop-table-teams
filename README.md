@@ -19,7 +19,7 @@ For our Natural Language Processing course group project, we are developing a co
 
     `conda activate my_env`
 
-    `pip install -f requirements.txt`
+    `pip install -r requirements.txt`
 3. Download static dataset.
 
     `python -m src.dataset_scraping`
