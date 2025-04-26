@@ -6,7 +6,7 @@ from langchain_community.vectorstores import FAISS
 from src.dataset_loading import load_dataset_to_splits
 
 
-def init_embeddings(cuda_enabled: bool):
+def init_embeddings(cuda_available: bool):
     faiss_index_path = "faiss_index"
     index_file = os.path.join(faiss_index_path, "index.faiss")
     store_file = os.path.join(faiss_index_path, "index.pkl")
@@ -14,8 +14,8 @@ def init_embeddings(cuda_enabled: bool):
     embed_model = "sentence-transformers/all-mpnet-base-v2"
     embedding = HuggingFaceEmbeddings(
         model_name=embed_model,
-        model_kwargs={"device": "cuda" if cuda_enabled else "cpu"},
-        encode_kwargs={"batch_size": 64 if cuda_enabled else 16}
+        model_kwargs={"device": "cuda" if cuda_available else "cpu"},
+        encode_kwargs={"batch_size": 64 if cuda_available else 16}
     )
 
     if os.path.exists(index_file) and os.path.exists(store_file):

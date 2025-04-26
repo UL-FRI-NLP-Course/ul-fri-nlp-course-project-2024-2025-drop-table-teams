@@ -4,8 +4,7 @@ import torch
 import transformers
 
 
-def init_model(hf_token: str, cuda_enabled: bool):
-    _hf_login(hf_token)
+def init_model(hf_token: str, cuda_available: bool):
     model_name = "mistralai/Mistral-7B-Instruct-v0.2"
 
     bnb_config = transformers.BitsAndBytesConfig(
@@ -17,22 +16,16 @@ def init_model(hf_token: str, cuda_enabled: bool):
 
     model_config = transformers.AutoConfig.from_pretrained(
         pretrained_model_name_or_path=model_name,
+        token=hf_token
     )
     model = transformers.AutoModelForCausalLM.from_pretrained(
         pretrained_model_name_or_path=model_name,
         config=model_config,
-        quantization_config=bnb_config if cuda_enabled else None,
-        device_map="auto" if cuda_enabled else "cpu",
+        quantization_config=bnb_config if cuda_available else None,
+        device_map="auto" if cuda_available else "cpu",
+        token=hf_token
     )
 
     model.eval()
 
     return model, model_name
-
-
-def _hf_login(hf_token):
-    try:
-        subprocess.run(["huggingface-cli", "login", "--token", hf_token], check=True)
-        print("Logged in to Hugging Face successfully.")
-    except subprocess.CalledProcessError as e:
-        print("Failed to log in to Hugging Face:", e)

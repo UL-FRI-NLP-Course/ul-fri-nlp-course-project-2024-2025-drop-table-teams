@@ -2,6 +2,7 @@ import uvicorn
 import os
 import json
 import uuid
+import torch
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, Request, HTTPException
@@ -19,7 +20,6 @@ from src.retriever_initialisation import init_retriever
 load_dotenv()
 HISTORY_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "chat_history"))
 os.makedirs(HISTORY_DIR, exist_ok=True)
-cuda_enabled = os.getenv("CUDA_ENABLED", "Y").lower() in ['true', 'yes', 'y']
 
 SESSION_FILE = os.path.join(HISTORY_DIR, "current_chat.txt")
 
@@ -38,13 +38,15 @@ app.add_middleware(
 @app.on_event("startup")
 async def startup_event():
     global model, model_name, pipeline, chain, vectorstore, retriever
-    print("Initializing model...")
+
+    cuda_available = torch.cuda.is_available()
+    print(f"Initializing model... CUDA available: {cuda_available}")
     token = os.getenv("hf_token")
     if not token:
         raise RuntimeError("hf_token not found in .env")
-    model, model_name = init_model(token, cuda_enabled)
+    model, model_name = init_model(token, cuda_available)
     pipeline = init_pipeline(model=model, model_name=model_name)
-    vectorstore = init_embeddings(cuda_enabled)
+    vectorstore = init_embeddings(cuda_available)
     retriever = init_retriever(vectorstore)
     chain = init_chain(pipeline=pipeline, retriever=retriever)
     print("Start-up complete.")
