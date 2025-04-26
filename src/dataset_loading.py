@@ -1,14 +1,18 @@
 import os
+import random
 
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 
-def load_dataset_to_splits() -> list[Document]:
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=20)
+def load_dataset_to_splits(limit_documents=100) -> list[Document]:
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=20)
     base_dir = os.path.dirname(os.path.dirname(__file__))
     data_dir = os.path.join(base_dir, "data")
     corpus = _find_txt_files_contents(data_dir)
+    if (limit_documents != None):
+        print(f"Using only {limit_documents} documents.")
+        corpus = random.sample(corpus, limit_documents)
     split_documents = text_splitter.split_documents(corpus)
     print(f"Found {len(split_documents)} splits to populate.")
     return split_documents

@@ -77,12 +77,20 @@ async def ask_question(payload: Question):
     formatted_history = [(entry["question"], entry["answer"]) for entry in history]
 
     question = payload.question
-    answer = chain.invoke(
-        {"question": question,
-         "chat_history": formatted_history}
-    )["answer"].split("### Answer:")[-1].strip()
+    response = chain.invoke({
+        "question": question,
+        "chat_history": []
+    })
+    answer = response["answer"].split("### Answer:")[-1].strip()
 
-    history.append({"question": question, "answer": answer})
+    source_documents = response["source_documents"]
+    sources = {}
+    for source_doc in source_documents:
+        source_file = source_doc.metadata["source"]
+        source_name = source_file.split("/")[-1].split(".")[0]
+        sources[source_name] = source_file
+
+    history.append({"question": question, "answer": answer, "sources": sources})
     _save_chat_history(chat_id, history)
     return {"history": history}
 

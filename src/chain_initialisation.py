@@ -26,7 +26,7 @@ def init_chain(pipeline, retriever):
     chain = ConversationalRetrievalChain.from_llm(
         llm=llm,
         retriever=retriever,
-        return_source_documents=False,
+        return_source_documents=True,
         combine_docs_chain_kwargs={"prompt": prompt_template},
         verbose=False,
     )

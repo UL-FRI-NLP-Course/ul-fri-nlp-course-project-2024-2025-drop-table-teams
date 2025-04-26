@@ -1,11 +1,10 @@
-import subprocess
-
 import torch
 import transformers
 
 
 def init_model(hf_token: str, cuda_available: bool):
-    model_name = "mistralai/Mistral-7B-Instruct-v0.2"
+    #model_name = "mistralai/Mistral-7B-Instruct-v0.2"
+    model_name = "openai-community/gpt2"
 
     bnb_config = transformers.BitsAndBytesConfig(
         load_in_4bit=True,  # loading in 4 bit

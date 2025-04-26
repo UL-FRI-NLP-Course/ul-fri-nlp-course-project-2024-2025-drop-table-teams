@@ -11,7 +11,8 @@ def init_embeddings(cuda_available: bool):
     index_file = os.path.join(faiss_index_path, "index.faiss")
     store_file = os.path.join(faiss_index_path, "index.pkl")
 
-    embed_model = "sentence-transformers/all-mpnet-base-v2"
+    #embed_model = "sentence-transformers/all-mpnet-base-v2"
+    embed_model = "sentence-transformers/paraphrase-MiniLM-L6-v2"
     embedding = HuggingFaceEmbeddings(
         model_name=embed_model,
         model_kwargs={"device": "cuda" if cuda_available else "cpu"},

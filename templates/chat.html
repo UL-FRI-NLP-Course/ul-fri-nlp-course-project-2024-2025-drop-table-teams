@@ -259,9 +259,41 @@
 
           const botBubble = document.createElement("div");
           botBubble.className = "bubble bot";
-          botBubble.textContent = last.answer;
+
+          const botAnswerArea = document.createElement("div")
+          botAnswerArea.className = "bubble bot answer"
+          botAnswerArea.textContent = last.answer;
+          botBubble.appendChild(botAnswerArea)
+
+          const botSourcesArea = document.createElement("div")
+          botSourcesArea.className = "bubble bot sources"
+
+          const sourcesList = document.createElement("ul");
+          for (const [sourceName, sourceFile] of Object.entries(last.sources)) {
+            const listItem = document.createElement("li");
+    
+            const link = document.createElement("a");
+            link.href = "file://" + sourceFile;
+            link.textContent = sourceName;
+            link.target = "_blank";
+            
+            listItem.appendChild(link);
+            sourcesList.appendChild(listItem);
+          }
+          if (Object.keys(last.sources).length > 0) {
+            const sourcesLabel = document.createElement("div");
+            sourcesLabel.textContent = "Sources:";
+            sourcesLabel.style.fontWeight = "bold";
+            botSourcesArea.appendChild(sourcesLabel);
+            botSourcesArea.appendChild(sourcesList)
+          }
+          
+          botBubble.appendChild(botSourcesArea)
+
           chatBox.appendChild(botBubble);
           chatBox.scrollTop = chatBox.scrollHeight;
+
+          console.log(last.sources)
 
           input.disabled = false;
           sendButton.disabled = false;
