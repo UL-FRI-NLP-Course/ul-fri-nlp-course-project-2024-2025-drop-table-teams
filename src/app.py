@@ -43,10 +43,7 @@ async def startup_event():
 
     cuda_available = torch.cuda.is_available()
     print(f"Initializing model... CUDA available: {cuda_available}")
-    token = os.getenv("hf_token")
-    if not token:
-        raise RuntimeError("hf_token not found in .env")
-    model, model_name = init_model(token, cuda_available)
+    model, model_name = init_model(cuda_available)
     pipeline = init_pipeline(model=model, model_name=model_name)
     vectorstore = init_embeddings(cuda_available)
     retriever = init_retriever(vectorstore)

@@ -1,11 +1,14 @@
+import os
 import torch
 import transformers
 
 
-def init_model(hf_token: str, cuda_available: bool):
-    #model_name = "mistralai/Mistral-7B-Instruct-v0.2"
-    model_name = "openai-community/gpt2"
-
+def init_model(cuda_available: bool):
+    hf_token = os.getenv("hf_token")
+    if not hf_token:
+        raise RuntimeError("hf_token not found in .env")
+    llm_name = os.getenv("llm_name")
+    
     bnb_config = transformers.BitsAndBytesConfig(
         load_in_4bit=True,  # loading in 4 bit
         bnb_4bit_quant_type="nf4",  # quantization type
@@ -14,11 +17,11 @@ def init_model(hf_token: str, cuda_available: bool):
     )
 
     model_config = transformers.AutoConfig.from_pretrained(
-        pretrained_model_name_or_path=model_name,
+        pretrained_model_name_or_path=llm_name,
         token=hf_token
     )
     model = transformers.AutoModelForCausalLM.from_pretrained(
-        pretrained_model_name_or_path=model_name,
+        pretrained_model_name_or_path=llm_name,
         config=model_config,
         quantization_config=bnb_config if cuda_available else None,
         device_map="auto" if cuda_available else "cpu",
@@ -27,4 +30,4 @@ def init_model(hf_token: str, cuda_available: bool):
 
     model.eval()
 
-    return model, model_name
+    return model, llm_name
