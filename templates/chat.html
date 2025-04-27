@@ -273,7 +273,7 @@
             const listItem = document.createElement("li");
     
             const link = document.createElement("a");
-            link.href = "file://" + sourceFile;
+            link.href = `/source_doc?path=${sourceFile}`;
             link.textContent = sourceName;
             link.target = "_blank";
             
@@ -292,8 +292,6 @@
 
           chatBox.appendChild(botBubble);
           chatBox.scrollTop = chatBox.scrollHeight;
-
-          console.log(last.sources)
 
           input.disabled = false;
           sendButton.disabled = false;

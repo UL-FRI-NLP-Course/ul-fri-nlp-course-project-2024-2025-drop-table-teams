@@ -5,8 +5,8 @@ import uuid
 import torch
 
 from dotenv import load_dotenv
-from fastapi import FastAPI, Request, HTTPException
-from fastapi.responses import HTMLResponse
+from fastapi import FastAPI, Request, HTTPException, Query
+from fastapi.responses import HTMLResponse, FileResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -18,7 +18,9 @@ from src.pipeline_initialisation import init_pipeline
 from src.retriever_initialisation import init_retriever
 
 load_dotenv()
-HISTORY_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "chat_history"))
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+HISTORY_DIR = os.path.join(BASE_DIR, "chat_history")
+DATA_DIR = os.path.join(BASE_DIR, "data")
 os.makedirs(HISTORY_DIR, exist_ok=True)
 
 SESSION_FILE = os.path.join(HISTORY_DIR, "current_chat.txt")
@@ -86,9 +88,10 @@ async def ask_question(payload: Question):
     source_documents = response["source_documents"]
     sources = {}
     for source_doc in source_documents:
-        source_file = source_doc.metadata["source"]
-        source_name = source_file.split("/")[-1].split(".")[0]
-        sources[source_name] = source_file
+        source_path = source_doc.metadata["source"]
+        relative_source_path = os.path.relpath(source_path, DATA_DIR)
+        source_name = relative_source_path.split("/")[-1].split(".")[0]
+        sources[source_name] = relative_source_path
 
     history.append({"question": question, "answer": answer, "sources": sources})
     _save_chat_history(chat_id, history)
@@ -134,6 +137,19 @@ async def change_chat_name(new_chat: ChatName):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to rename chat: {str(e)}")
     return {"new_chat_name": chat_name, "history": _load_chat_history(chat_name)}
+
+@app.get("/source_doc")
+async def get_source_document(path: str = Query(...)):
+    # probably a security vulnerability :)
+    doc_path = os.path.join(DATA_DIR, path)
+    if os.path.isfile(doc_path):
+        return FileResponse(
+            path=doc_path,
+            filename=os.path.basename(doc_path),
+            media_type="application/octet-stream"
+        )
+    else:
+        raise HTTPException(status_code=404, detail="File not found.")
 
 
 def _get_current_chat_id():
