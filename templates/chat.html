@@ -214,7 +214,25 @@
       <div class="chat-box" id="chat-box">
         {% for entry in history %}
           <div class="bubble user">{{ entry.question }}</div>
-          <div class="bubble bot">{{ entry.answer }}</div>
+          <div class="bubble bot">
+            <div class="bubble bot answer">{{ entry.answer }}</div>
+            {% if entry.sources %}
+              <div class="bubble bot sources">
+                <div>
+                  <strong>Sources:</strong>
+                </div>
+                <ul>
+                  {% for source_name, source_path in entry.sources.items() %}
+                    <li>
+                      <a href="/source_doc?path={{ source_path }}" target="_blank">
+                        {{ source_name }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          </div>
         {% endfor %}
       </div>
       <div id="loading-indicator" class="loading-indicator" style="display: none;">
