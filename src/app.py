@@ -11,11 +11,12 @@ from fastapi.templating import Jinja2Templates
 from fastapi.middleware.cors import CORSMiddleware
 
 from src.chain_initialisation import init_chain
-from src.embedding_initialisation import init_embeddings
+from src.embedding_management import init_embeddings, add_embeddings_from_files
 from src.model_initialisation import init_model
 from src.models import ChatName, Question
 from src.pipeline_initialisation import init_pipeline
 from src.retriever_initialisation import init_retriever
+from src.dynamic_doc_retrieval import download_documents
 
 load_dotenv()
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -76,6 +77,11 @@ async def ask_question(payload: Question):
     formatted_history = [(entry["question"], entry["answer"]) for entry in history]
 
     question = payload.question
+
+    # TODO: keyword/query extraction
+    downloaded_files = download_documents(question, os.path.join(DATA_DIR, "dynamic"), 1, 5)
+    add_embeddings_from_files(vectorstore, downloaded_files)
+
     response = chain.invoke({
         "question": question,
         "chat_history": []

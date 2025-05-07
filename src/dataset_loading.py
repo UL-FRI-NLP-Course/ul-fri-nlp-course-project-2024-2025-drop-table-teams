@@ -1,5 +1,6 @@
 import os
 import random
+import pymupdf
 
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -42,3 +43,18 @@ def _find_txt_files_contents(directory, exclude_names=("README", "language")):
                     print(f"Error reading {file_path}: {e}")
     print(f"Found {len(documents)} documents in directory {directory}")
     return documents
+
+
+def load_pdfs(file_paths: list[str]) -> list[Document]:
+    docs = []
+    for file_path in file_paths:
+        with pymupdf.open(file_path) as pdf:
+            content = ""
+            for page in pdf:
+                content += page.get_text()
+            
+            doc = Document(page_content=content, metadata={"source": file_path})
+            docs.append(doc)
+    
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=20)
+    return text_splitter.split_documents(docs)
