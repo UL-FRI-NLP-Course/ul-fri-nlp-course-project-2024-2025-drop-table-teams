@@ -1,15 +1,18 @@
-from scholarly import scholarly
 import requests
 import os
 
-def download_documents(query: str, data_dir: str, num_docs: int, max_tries: int):
+from scholarly import scholarly
+from keybert import KeyBERT
 
+
+def download_documents(query: str, data_dir: str, num_docs: int, max_tries: int):
+    print(f"Querying Google Scholar for: {query}")
     search = scholarly.search_pubs(query)
     downloads = []
     for i in range(max_tries):
         result = next(search)
         title = result["bib"]["title"]
-        print(f"{i}: {title}")
+        print(f"Result {i+1}: {title}")
         if "eprint_url" in result:
             response = requests.get(result["eprint_url"], stream=True, verify=False)
 
@@ -29,5 +32,13 @@ def download_documents(query: str, data_dir: str, num_docs: int, max_tries: int)
                     break
             else:
                 print("The eprint URL is not a direct link to a PDF.")
-
+        else:
+            print("No direct link for downloading this document.")
     return downloads
+
+def initialise_keyword_model():
+    return KeyBERT()
+
+def generate_query_from_question(keyword_model, question):
+    keywords = keyword_model.extract_keywords(question, keyphrase_ngram_range=(1, 1))
+    return " ".join([keyword[0] for keyword in keywords])

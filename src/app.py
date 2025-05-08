@@ -16,12 +16,13 @@ from src.model_initialisation import init_model
 from src.models import ChatName, Question
 from src.pipeline_initialisation import init_pipeline
 from src.retriever_initialisation import init_retriever
-from src.dynamic_doc_retrieval import download_documents
+from src.dynamic_doc_retrieval import download_documents, initialise_keyword_model, generate_query_from_question
 
 load_dotenv()
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 HISTORY_DIR = os.path.join(BASE_DIR, "chat_history")
 DATA_DIR = os.path.join(BASE_DIR, "data")
+DYNAMIC_DATA_DIR = os.path.join(DATA_DIR, "dynamic")
 os.makedirs(HISTORY_DIR, exist_ok=True)
 
 SESSION_FILE = os.path.join(HISTORY_DIR, "current_chat.txt")
@@ -40,7 +41,7 @@ app.add_middleware(
 
 @app.on_event("startup")
 async def startup_event():
-    global model, model_name, pipeline, chain, vectorstore, retriever
+    global model, model_name, pipeline, chain, vectorstore, retriever, keyword_model
 
     cuda_available = torch.cuda.is_available()
     print(f"Initializing model... CUDA available: {cuda_available}")
@@ -49,6 +50,7 @@ async def startup_event():
     vectorstore = init_embeddings(cuda_available)
     retriever = init_retriever(vectorstore)
     chain = init_chain(pipeline=pipeline, retriever=retriever)
+    keyword_model = initialise_keyword_model()
     print("Start-up complete.")
 
 
@@ -78,8 +80,8 @@ async def ask_question(payload: Question):
 
     question = payload.question
 
-    # TODO: keyword/query extraction
-    downloaded_files = download_documents(question, os.path.join(DATA_DIR, "dynamic"), 1, 5)
+    query = generate_query_from_question(keyword_model, question)
+    downloaded_files = download_documents(query, DYNAMIC_DATA_DIR, 1, 5)
     add_embeddings_from_files(vectorstore, downloaded_files)
 
     response = chain.invoke({
