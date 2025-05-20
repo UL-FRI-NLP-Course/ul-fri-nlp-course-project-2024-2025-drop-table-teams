@@ -65,7 +65,6 @@ def _download_from_scihub(data_dir, downloads, url, title):
     print(f"Downloading {title} from Sci Hub: {url}")
     safe_title = safe_filename(title)
     filename = os.path.join(data_dir, f"{safe_title}.pdf")
-    downloads.append(filename)
 
     from scidownl import scihub_download
 
@@ -74,6 +73,12 @@ def _download_from_scihub(data_dir, downloads, url, title):
         'http': 'socks5://127.0.0.1:7890'
     }
     scihub_download(url, paper_type=paper_type, out=filename, proxies=proxies)
+
+    if os.path.exists(filename) and os.path.getsize(filename) > 0:
+        print(f"Successfully downloaded to {filename}")
+        downloads.append(filename)
+    else:
+        print(f"Failed to download {title} via Sci-Hub.")
 
 
 def safe_filename(title: str):
