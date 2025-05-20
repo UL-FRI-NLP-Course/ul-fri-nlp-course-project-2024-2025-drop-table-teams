@@ -1,6 +1,6 @@
 # Natural language processing course: `'; DROP TABLE TEAMS; --`
 
-Henri Sellis, Igor Sitek, Ivana Dragonová
+Henri Sellis, Igor Sitek
 
 **Project 1: Conversational Agent with Retrieval-Augmented Generation**
 

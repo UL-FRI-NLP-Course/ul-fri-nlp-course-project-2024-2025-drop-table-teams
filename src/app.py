@@ -86,7 +86,7 @@ async def ask_question(payload: Question):
 
     response = chain.invoke({
         "question": question,
-        "chat_history": []
+        "chat_history": formatted_history
     })
     answer = response["answer"].split("### Answer:")[-1].strip()
 

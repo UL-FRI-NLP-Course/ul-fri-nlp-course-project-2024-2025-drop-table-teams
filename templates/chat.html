@@ -191,6 +191,10 @@
       margin-right: 10px;
     }
 
+    a {
+      color: #b9fbc0
+    }
+
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
@@ -215,7 +219,9 @@
         {% for entry in history %}
           <div class="bubble user">{{ entry.question }}</div>
           <div class="bubble bot">
-            <div class="bubble bot answer">{{ entry.answer }}</div>
+            <div class="bubble bot answer">
+                {{ entry.answer | safe }}
+            </div>
             {% if entry.sources %}
               <div class="bubble bot sources">
                 <div>
@@ -280,7 +286,7 @@
 
           const botAnswerArea = document.createElement("div")
           botAnswerArea.className = "bubble bot answer"
-          botAnswerArea.textContent = last.answer;
+          botAnswerArea.innerHTML = last.answer;
           botBubble.appendChild(botAnswerArea)
 
           const botSourcesArea = document.createElement("div")

@@ -5,12 +5,12 @@ from langchain_community.vectorstores import FAISS
 
 from src.dataset_loading import load_dataset_to_splits, load_pdfs
 
-
 faiss_index_path = "faiss_index"
+
 
 def init_embeddings(cuda_available: bool):
     embed_model = os.getenv("embedding_model")
-    
+
     index_file = os.path.join(faiss_index_path, "index.faiss")
     store_file = os.path.join(faiss_index_path, "index.pkl")
 
@@ -33,8 +33,10 @@ def init_embeddings(cuda_available: bool):
         print("Vectorstore loaded successfully.")
         return vectorstore
 
+
 def add_embeddings_from_files(vectorstore: FAISS, file_paths: list):
-    splits = load_pdfs(file_paths)
-    vectorstore.add_documents(splits)
-    vectorstore.save_local(faiss_index_path)
-    print(f"Vectorstore updated with {len(splits)} document splits.")
+    if len(file_paths) > 0:
+        splits = load_pdfs(file_paths)
+        vectorstore.add_documents(splits)
+        vectorstore.save_local(faiss_index_path)
+        print(f"Vectorstore updated with {len(splits)} document splits.")
