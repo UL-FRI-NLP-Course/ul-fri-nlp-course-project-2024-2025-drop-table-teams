@@ -97,7 +97,7 @@ async def ask_question(payload: Question):
     for source_doc in source_documents:
         source_path = source_doc.metadata["source"]
         relative_source_path = os.path.relpath(source_path, DATA_DIR)
-        source_name = relative_source_path.split("/")[-1].split(".")[0]
+        source_name = os.path.splitext(os.path.basename(relative_source_path))[0]
         sources[source_name] = relative_source_path
 
     history.append({"question": question, "answer": answer, "sources": sources})

@@ -1,4 +1,5 @@
 import os
+import re
 
 import requests
 from keybert import KeyBERT
@@ -42,7 +43,7 @@ def _download_from_scholarly(data_dir, downloads, result, title):
 
             if response.status_code == 200 and is_pdf:
                 os.makedirs(data_dir, exist_ok=True)
-                safe_title = title.replace(" ", "_").replace("/", "_")
+                safe_title = safe_filename(title)
                 filename = os.path.join(data_dir, f"{safe_title}.pdf")
 
                 with open(filename, "wb") as f:
@@ -62,7 +63,7 @@ def _download_from_scholarly(data_dir, downloads, result, title):
 
 def _download_from_scihub(data_dir, downloads, url, title):
     print(f"Downloading {title} from Sci Hub: {url}")
-    safe_title = title.replace(" ", "_").replace("/", "_")
+    safe_title = safe_filename(title)
     filename = os.path.join(data_dir, f"{safe_title}.pdf")
     downloads.append(filename)
 
@@ -73,6 +74,13 @@ def _download_from_scihub(data_dir, downloads, url, title):
         'http': 'socks5://127.0.0.1:7890'
     }
     scihub_download(url, paper_type=paper_type, out=filename, proxies=proxies)
+
+
+def safe_filename(title: str):
+    # Replace spaces and slashes with underscores
+    title = title.replace(" ", "_").replace("/", "_")
+    # Remove all characters that are not alphanumeric, underscore, dash, or dot
+    return re.sub(r'[^a-zA-Z0-9_\-\.]', '', title)
 
 
 def initialise_keyword_model():
