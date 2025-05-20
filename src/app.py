@@ -81,7 +81,9 @@ async def ask_question(payload: Question):
     question = payload.question
 
     query = generate_query_from_question(keyword_model, question)
-    downloaded_files = download_documents(query, DYNAMIC_DATA_DIR, 1, 5)
+    num_docs: int = int(os.getenv("num_docs"))
+    max_tries: int = int(os.getenv("max_tries"))
+    downloaded_files = download_documents(query, DYNAMIC_DATA_DIR, num_docs, max_tries)
     add_embeddings_from_files(vectorstore, downloaded_files)
 
     response = chain.invoke({
