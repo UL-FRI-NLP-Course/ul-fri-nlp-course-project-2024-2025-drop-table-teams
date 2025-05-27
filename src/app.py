@@ -9,6 +9,7 @@ from fastapi import FastAPI, Request, HTTPException, Query
 from fastapi.responses import HTMLResponse, FileResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.middleware.cors import CORSMiddleware
+from sentence_transformers import CrossEncoder
 
 from src.chain_initialisation import init_chain
 from src.embedding_management import init_embeddings, add_embeddings_from_files
@@ -41,7 +42,7 @@ app.add_middleware(
 
 @app.on_event("startup")
 async def startup_event():
-    global model, model_name, pipeline, chain, vectorstore, retriever, keyword_model
+    global model, model_name, pipeline, chain, vectorstore, retriever, keyword_model, reranker
 
     cuda_available = torch.cuda.is_available()
     print(f"Initializing model... CUDA available: {cuda_available}")
@@ -49,6 +50,7 @@ async def startup_event():
     pipeline = init_pipeline(model=model, model_name=model_name)
     vectorstore = init_embeddings(cuda_available)
     retriever = init_retriever(vectorstore)
+    reranker = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
     chain = init_chain(pipeline=pipeline, retriever=retriever)
     keyword_model = initialise_keyword_model()
     print("Start-up complete.")
@@ -95,8 +97,9 @@ async def ask_question(payload: Question):
     answer = response["answer"].split("### Answer:")[-1].strip()
 
     source_documents = response["source_documents"]
+    filtered_docs = rerank_documents(question, source_documents, top_k=3)
     sources = {}
-    for source_doc in source_documents:
+    for source_doc in filtered_docs:
         source_path = source_doc.metadata["source"]
         relative_source_path = os.path.relpath(source_path, DATA_DIR)
         source_name = os.path.splitext(os.path.basename(relative_source_path))[0]
@@ -160,6 +163,16 @@ async def get_source_document(path: str = Query(...)):
     else:
         raise HTTPException(status_code=404, detail="File not found.")
 
+
+def rerank_documents(query: str, documents: list, top_k: int = 3) -> list:
+    if not documents:
+        return []
+
+    pairs = [(query, doc.page_content) for doc in documents]
+    scores = reranker.predict(pairs)
+    ranked = sorted(zip(documents, scores), key=lambda x: x[1], reverse=True)
+
+    return [doc for doc, score in ranked[:top_k] if score > 0.5]
 
 def _get_current_chat_id():
     if os.path.exists(SESSION_FILE):

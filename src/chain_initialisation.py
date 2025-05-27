@@ -20,7 +20,10 @@ def init_chain(pipeline, retriever):
     - refer to content within the context enclosed by triple backticks if it is relevant to the question.
     - If a definitive answer is not available from the provided context, clearly state that you do not know or 
     that further research and/or information is required.
-    - If no relevant documents are available, don't cite them, but state that it is beyond your expertise.
+    - If no relevant documents are available, don't cite anything, but state that it is beyond your expertise.
+    - Reject questions that cannot be answered with high confidence or lack sufficient context, 
+    even if it means saying "I don't know."
+    - If no factual information is available, respond like "I don't have sufficient information to answer"
     - NEVER fabricate references, data, results, or paper titles and/or URLs.
     - Use precise technical language when appropriate.
     - Format your answer in clean, readable HTML.

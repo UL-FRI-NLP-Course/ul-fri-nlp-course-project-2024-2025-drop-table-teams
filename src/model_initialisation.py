@@ -10,9 +10,9 @@ def init_model(cuda_available: bool):
     llm_name = os.getenv("llm_name")
     
     bnb_config = transformers.BitsAndBytesConfig(
-        load_in_4bit=True,  # loading in 4 bit
-        bnb_4bit_quant_type="nf4",  # quantization type
-        bnb_4bit_use_double_quant=True,  # nested quantization
+        load_in_4bit=True,
+        bnb_4bit_quant_type="nf4",
+        bnb_4bit_use_double_quant=True,
         bnb_4bit_compute_dtype=torch.bfloat16,
     )
 
