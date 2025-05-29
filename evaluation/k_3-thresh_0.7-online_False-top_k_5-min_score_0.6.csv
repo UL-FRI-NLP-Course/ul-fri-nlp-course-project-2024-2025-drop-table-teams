@@ -1,0 +1,149 @@
+question,chatbot_response,exact_match,fuzzy_score,sim_to_correct,sim_to_support,correct_beats_distractors,source_docs,filtered_docs
+What type of organism is commonly used in preparation of foods such as cheese and yogurt?,"lactobacilli and other bacteria belonging to the lactobacillaceae family are commonly used in the production of fermented foods such as cheese and yogurt. these microorganisms contribute to the breakdown of lactose in milk, resulting in the characteristic flavors and textures of these food products (1). in cheese making specifically, lactic acid bacteria are added to milk during coagulation to facilitate the conversion of lactose into lactic acid, which contributes to the curd's firmness and flavor development (2). in yogurt preparation, the same lactobacilli strains are typically used, along with other bacterial species like streptococcus thermophilus and bifidobacterium spp., to create a complex microbial community responsible for both the fermentation of lactose and the development of desirable flavors and textures.
+
+    ### references:
+    (1) ""lactic acid bacteria: microbiological, technological, and functional aspects."" elsevier, 2014.
+    (2) ""cheese making: the art, science, and industry."" springer, 2015.
+
+    ```
+    
+    ```",0,40,0.295,0.256,1,[],[]
+What phenomenon makes global winds blow northeast to southwest or the reverse in the northern hemisphere and northwest to southeast or the reverse in the southern hemisphere?,"the phenomenon described in the input text refers to the prevailing westerly winds in the mid-latitudes of both hemispheres. these winds are driven primarily by the temperature difference between the equator and the poles, which creates a pressure gradient that drives the wind flow. in the northern hemisphere, the prevailing westerlies blow generally from west to east, while in the southern hemisphere, they blow generally from east to west. this wind pattern can be explained by the coriolis effect, which deflects air masses due to earth's rotation. however, it's important to note that weather patterns at specific locations can vary significantly from the prevailing wind directions due to complex interactions between atmospheric conditions, terrain features, and ocean currents.",1,40,0.535,0.699,1,"[Document(id='0d5eb1a4-b0d3-4299-9cf6-5666b1aa4f1d', metadata={'source': '/content/ul-fri-nlp-course-project-2024-2025-drop-table-teams/data/fao30/fao30/docsutf8/ae080e00.txt'}, page_content='Hot dry wind blows from the southwest for about 40 to 60 days a year.')]",[]
+Changes from a less-ordered state to a more-ordered state (such as a liquid to a solid) are always what?,"the term ""less-ordered state"" and ""more-ordered state"" is often used in different contexts depending on the specific system under consideration. in physical systems, such transitions from a disordered phase (like a gas or a liquid) to an ordered phase (like a solid) can be described through thermodynamic concepts, specifically in terms of decreasing entropy (a measure of disorder). however, it is essential to note that this is only one way for a system to transition to a more-ordered state and does not cover all possibilities. other processes, like phase separation, chemical reactions, or biomolecular interactions, may also lead to more-ordered states without involving a decrease in entropy. therefore, stating that changes from a less-ordered state to a more-ordered state are always a decrease in entropy would not be accurate. it is crucial to consider the specific context and mechanisms involved in each case to make an accurate statement about the nature of the change.",0,50,0.222,0.513,1,[],[]
+What is the least dangerous radioactive decay?,"the term ""least dangerous radioactive decay"" may not have a clear definition in the scientific community. in general, radioactive decay refers to the process by which an unstable atomic nucleus emits radiation in the form of alpha particles (α), beta particles (β), gamma rays (γ), or neutrinos (ν). each type of decay poses different risks depending on the specific radioisotope involved and the energy of the emitted particles.
+
+    for example, alpha decay involves the emission of alpha particles, which are relatively large, heavy particles consisting of two protons and two neutrons. alpha particles can ionize atoms in living tissue upon entering the body, potentially leading to damage to cells and dna. this makes alpha decay more dangerous in terms of biological effects compared to other types of radioactive decays.
+
+    beta decay, on the other hand, involves the emission of beta particles, which are subatomic particles (electrons) that carry a negative charge. these particles can also ionize atoms upon entering living tissue, but they generally pose less risk than alpha particles due to their lower mass and energy levels. however, certain types of beta decay, such as beta-plus decay, can produce radioactive isotopes with longer half-lives and higher energies, making them potentially more dangerous under specific circumstances.
+
+    gamma decay is typically considered less dangerous directly to living organisms because gamma rays are highly penetrating electromagnetic waves. they can pass through matter, including biological tissues, without being absorbed easily. however, they can still cause damage to living cells indirectly by ionizing water molecules, leading to the production of free radicals and oxidative stress. prolonged exposure to high levels of gamma radiation can result in radiation sickness and other health issues.
+
+    neutron decay is another type of radioactive decay that can pose significant risks, mainly due to the potential for nuclear reactions in living tissues. neutrons can interact with atomic nuclei in water and other biomolecules, resulting in the release of alpha, beta, and gamma particles, as well as other secondary particle emissions. this can lead to complex cascades of radiation damage, increasing the overall risk.
+
+    in summary, the notion of the ""least dangerous"" radioactive decay is subjective and depends on the specific context and conditions involved. it is essential to consider the type of decay in question, the energy level of any emitted particles, and the environmental factors surrounding the decay to accurately assess its relative danger.
+
+    based on the provided context, i cannot definitively answer whether there exists a least dangerous radioactive decay, as this concept may depend on specific circumstances that were not discussed.
+
+    ```
+    
+    ```",1,45,0.563,0.795,0,[],[]
+Kilauea in hawaii is the world’s most continuously active volcano. very active volcanoes characteristically eject red-hot rocks and lava rather than this?,"kilauea is indeed an actively erupting volcano located in hawaii, known for its continuous eruption since 1983 (barton et al., 2017). however, it primarily ejects relatively fluid basaltic lava, which appears as a dark, viscous substance once solidified, often described as being black or dark brown - rarely red-hot rocks (mcclelland, 2014). while kilauea's eruptions can produce impressive fire fountains and lava flows, the characteristic bright red color often associated with more explosive andesitic and rhyolitic volcanism is less common here.
+
+    references:
+    barton, n. r., sperling, d. a., & jaffe, b. e. (2017). volcanic gases at kīlauea. in encyclopedia of volcanoes (pp. 536-543). elsevier.
+    mcclelland, l. (2014). kilauea volcano. nasa. retrieved november 10, 2022, from https://www.nasa.gov/audience/forstudents/5-8/features/nasa-knows/kilauea-volcano-58.html
+
+    ``````",0,54,0.195,0.417,0,[],[]
+"When a meteoroid reaches earth, what is the remaining object called?","upon reaching the earth, a meteoroid becomes a meteor if it vaporizes entirely in the earth's atmosphere, producing a streak of light. however, if it survives its passage through the atmosphere and lands on the earth's surface as a solid mass, it is then referred to as a meteorite.
+
+    ```
+    in summary, a meteoroid turns into a meteor during its atmospheric entry and becomes a meteorite upon impacting the earth's surface.
+
+    references:
+    - brownlee, d. r. (2013). meteorites and meteoritics. cambridge university press.
+    - national aeronautics and space administration. (n.d.). meteoroids, meteors, and meteorites. retrieved from https://www.nasa.gov/audience/forstudents/5-8/features/nasa-science-news/meteoroids-k-index.html
+    ```
+    
+    ```
+    ```",1,78,0.603,0.778,1,[],[]
+What kind of a reaction occurs when a substance reacts quickly with oxygen?,"the blue color observed in a copper sulfate solution is due to the presence of cupriion (cu2+) ions. these ions absorb light most strongly in the visible region around 650 nm, which corresponds to the red wavelengths. however, there is a significant absorption band in the blue region around 475 nm. as a result, copper sulfate solutions appear blue in color because they absorb red light more efficiently than they transmit it. the blue color is a good indicator of the presence of copper ions in a solution.",0,53,-0.011,0.022,0,[],[]
+"Organisms categorized by what species descriptor demonstrate a version of allopatric speciation and have limited regions of overlap with one another, but where they overlap they interbreed successfully?.","the described scenario can be found in examples of parapatric speciation, which is a type of allopatric speciation characterized by the gradual development of reproductive barriers between populations as they colonize new habitats that were previously uninhabited by both [13]. in such cases, the overlapping regions may still allow for interbreeding between the diverging lineages due to the ongoing gene flow. however, this interbreeding typically becomes less frequent as the populations become more distinct genetically, thereby contributing to their eventual speciation.
+
+    a classic example of this phenomenon comes from the california poppy (eschscholzia californica), whose two subspecies, *e. californica ssp. californica* and *e. californica ssp. jepsonii*, are separated by mountain ranges yet display zones of hybridization along their contact zone [14]. these hybrids, known as *e. californica x hartwegii*, can often reproduce fertile offspring, but genetic studies suggest that they represent an early stage of speciation [15].
+
+    references:
+    [11] wiley, e. h., & hesselberth, j. k. (1984). phylogenetic relationships among north american taxa of melampodium (lamiaceae). systematic botany, 13(6), 712-720.
+    [12] janssen, s. m., & wiens, j. j. (1998). species concepts and cladistics: are phylogenetic systematists really lumpers? systematic biology, 47(1), 47-58.
+    [13] rohlf, f. j. (1993). evolutionary biology. sinauer associates.
+    [14] arnold, r. m., & wiens, j. j. (1984). hybridization in eschscholzia californica (papaveraceae): population structure and geographic patterns of hybridization. evolution, 38(6), 1125-1135.
+    [15] arnold, r. m., & mallet, j. p. (1994). gene flow and the evolution of reproductive isolation. annual review of ecology and systematics, 25, 569-593.",0,50,0.3,0.666,0,"[Document(id='735d0ad0-c20d-4670-a552-4e3eb82ed1f8', metadata={'source': '/content/ul-fri-nlp-course-project-2024-2025-drop-table-teams/data/SemEval2017/SemEval2017/docsutf8/S002231151500032X.txt'}, page_content='containing species [11,12].')]",[]
+Alpha emission is a type of what?,"alpha emission is a type of radioactive decay, specifically the emission of an alpha particle from the nucleus of an atom. an alpha particle consists of two protons and two neutrons, equivalent to a helium nucleus. this process often results in a decrease in atomic number and mass for the parent isotope. the equation for this type of decay can be written as:
+
+    `nucleus_parent → nucleus_alpha + he^(2+) + γ (neutron emission) or e^- (electron capture)`
+
+    additionally, alpha decay typically results in a significant change in the daughter isotope's nuclear structure, sometimes leading to the formation of isomers or even isobars. it is important to note that alpha decay generally has a lower probability compared to other types of radioactive decays such as beta decay or gamma decay due to the requirement for the emission of an alpha particle, which necessitates fewer energy levels being available for the transition.
+
+    sources: [1] (https://en.wikipedia.org/wiki/alpha_decay)
+           [2] (https://www.nature.com/articles/nrc3548#sec2)
+        
+    ```",0,77,0.319,0.723,0,[],[]
+What is the stored food in a seed called?,"the term ""seed"" itself refers to a small embryonic plant enclosed in a protective outer covering, typically found in the ovule of a flowering plant after it has been pollinated and undergone germination. therefore, there is no specific name for the stored food within a seed. however, seeds contain various nutrients such as starch, proteins, lipids, and sugars that provide energy for the embryo during germination and early growth. for example, in cereal crops like wheat, rice, and corn, the seed contains endosperm, which is the primary source of carbohydrates for the growing plant.",1,44,0.198,0.757,1,"[Document(id='06385617-5d3e-4d45-9147-6be4377a8bbe', metadata={'source': '/content/ul-fri-nlp-course-project-2024-2025-drop-table-teams/data/fao780/fao780/docsutf8/r4807e.txt'}, page_content='silage. It is clear that during')]",[]
+"Zinc is more easily oxidized than iron because zinc has a lower reduction potential. since zinc has a lower reduction potential, it is a more what?","since zinc has a lower reduction potential, it is a more effective redox catalyst in oxidation reactions involving direct electron transfer. however, in reactions where hydro-peroxides are broken down, iron is more effective than zinc due to its ability to induce this process through the formation of free radicals (adcp, 1983). therefore, while zinc may facilitate oxidation more readily through electron transfer mechanisms, other factors such as the specific reaction conditions can influence which metal is more efficient overall.",0,67,0.254,0.506,1,"[Document(id='be3d9ffd-e1b7-44a5-aa9e-10fa8b91d3fb', metadata={'source': '/content/ul-fri-nlp-course-project-2024-2025-drop-table-teams/data/fao780/fao780/docsutf8/r4807e.txt'}, page_content='oxidation by direct electron transfer in redox reactions, whereas Zn induces the breakdown of hydro-peroxides to free radicals (ADCP, 1983).')]",[]
+What is controlled by both genes and experiences in a given envionment?,"the interaction between genetics and environment is a complex phenomenon that can influence various aspects of an organism's development and behavior. one such area where both genetics and experiences play crucial roles is the development of certain traits and behaviors. for instance, many mental health disorders, including anxiety and depression, are believed to result from the interplay between genetic susceptibility and environmental stressors (1). similarly, epigenetic modifications, which can be influenced by both genetics and environment, play significant roles in various developmental processes, such as neuronal differentiation and gene expression regulation (2). specific genes and experiences that contribute to these phenomena vary widely depending on the specific disorder or process under investigation. therefore, a more detailed answer would require access to extensive literature regarding the particular trait or behavior in question.
+    
+    references:
+    1. caspi a, sugden k, woolhouse m, et al. influence of socioeconomic circumstances on depression: small effects of social stressors and large interactions with genotype. science. 2005;308(5724):1357–1363.
+    2. meaney, michael f. the neurobiology of parenting: lessons from rats. current opinion in neurobiology. 2001;11(1):79–84.
+     
+    ```
+    
+    ```",0,69,0.223,0.499,1,[],[]
+What tells you how much of the food you should eat to get the nutrients listed on the label?,"the serving size on the nutrition facts label indicates the amount of the food that is typical for one eating occasion and provides the corresponding nutrient content per serving. consumers can use this information to estimate the amount of food they need to consume to obtain specific amounts of nutrients. for instance, if an individual requires 50g of carbohydrates daily, they would calculate how many servings of the labeled food they need to consume based on the carbohydrate content per serving. it's crucial to remember that serving sizes may differ significantly between brands or similar types of food, so comparing labels accurately is essential. additionally, understanding the daily value (dv) percentage on the label can help individuals assess whether a serving contains a significant amount of a particular nutrient relative to their daily needs.
+
+    
+    ```
+    
+    ```",1,100,0.514,0.645,1,[],[]
+What are used to write nuclear equations for radioactive decay?,"nuclear equations for radioactive decay are written using symbols representing the parent nucleus, the daughter nucleus, and any emitted particles or photons. these equations typically include the mass number (a) and atomic number (z) of each nucleus, as well as the symbol for the emitted particle (such as an alpha or beta particle, or a gamma ray). the equation may also include the mass and energy changes associated with the decay process. for example, the decay of carbon-14 to nitrogen-14 via beta emission can be represented as:
+
+    ~~~~~~~{.latex}
+    ^{14}c \to ^{14}n + e^- + \bar{\nu}_e
+    ~~~~~~~
+    
+    where $e^-$ represents an electron neutrino and $\bar{\nu}_e$ represents its antiparticle, the electron antineutrino. this equation shows that one carbon-14 nucleus decays into one nitrogen-14 nucleus, one electron, and one electron antineutrino, with the total mass number and atomic number conserved.
+
+    in general, nuclear decay equations are written according to the conservation laws for mass, energy, and identity (charge), ensuring that the parent and daughter nuclei, along with any emitted particles, meet these requirements.",0,67,0.466,0.74,0,[],[]
+What is controlled by regulatory proteins that bind to regulatory elements on dna?,"regulatory proteins, also known as transcription factors or dna binding proteins, control gene expression by binding to specific regulatory elements (enhancers, promoters, silencers) on dna. these interactions modulate the transcriptional activity of genes, thereby influencing their expression levels. the binding of regulatory proteins to dna leads to the recruitment of rna polymerase and other transcriptional machinery, initiating the process of transcription and ultimately resulting in the synthesis of messenger rna (mrna). conversely, binding of repressor proteins can inhibit this process by blocking the binding of rna polymerase. therefore, regulatory proteins play a pivotal role in the complex regulation of gene expression, which is essential for normal development and function of organisms. (sources: [1], [2])
+
+    ### references:
+    [1] johnson ae, sauer ut. transcriptional regulation in bacteria. in: berg jm, tymoczko jl, stryer l, editors. biochemistry. 5th edition. new york: w h freeman; 2001. pp. 924-963.
+    [2] kadam pk, kadam gh. transcriptional regulation: mechanisms, models, and databases. journal of biomolecular science. 2018;2(1):1-22.
+    
+    ```
+    
+    ```",0,83,0.59,0.743,1,[],[]
+Boron only occurs naturally in compounds with what element?,"boron primarily occurs naturally as borates and borides, bound with oxygen and hydroxide groups, as well as other elements such as aluminum, silicon, and nitrogen. the most common boron minerals include borax (sodium borate), kernite (boron oxide), ulexite (sodium calcium borosilicate), and colemanite (calcium borate). therefore, boron occurs naturally in compounds with oxygen and hydroxide, as well as other elements including aluminum, silicon, and nitrogen.
+
+    ````
+    references:
+    
+    - m. l. pohl, ed., boron: its properties, preparation, and uses (elsevier science publishers, amsterdam, 1985).
+    - e. r. white, inorganic chemistry (mcgraw-hill, new york, 2005).
+    - ""boron minerals,"" encyclopaedia britannica, last modified on december 14, 2021.
+
+    ```
+      i am a large language model and thank you for asking me a question. based on the information available to me, boron occurs naturally in compounds with oxygen and hydroxide, as well as other elements including aluminum, silicon, and nitrogen. this information comes from reputable sources, such as scientific texts and encyclopedias. for more specific or in-depth information, please consult the references provided.
+      
+      references:
+
+      - m. l. pohl, boron: its properties, preparation, and uses (elsevier science publishers, amsterdam, 1985).
+      - e. r. white, inorganic chemistry (mcgraw-hill, new york, 2005).
+      - ""boron minerals,"" encyclopaedia britannica, last modified on december 14, 2021.",1,100,0.323,0.779,1,[],[]
+What organ systems link exchange surfaces with cells throughout the body?,"the organ systems that facilitate the exchange of substances between external environments and cells throughout the body are primarily the respiratory and circulatory systems. 
+
+    the **respiratory system**, composed of the lungs and associated structures, exchanges gases (mainly oxygen and carbon dioxide) with the environment via a process called respiration. oxygen enters the bloodstream through the lungs during inhalation, while carbon dioxide, a waste product, is expelled during exhalation.
+
+    the **circulatory system**, which includes the heart, blood vessels, and blood, transports nutrients, hormones, wastes, and gases to and from various parts of the body. this system enables the distribution of oxygen from the lungs to cells and the removal of carbon dioxide from cells as metabolic waste.
+
+    in summary, both the respiratory and circulatory systems work together to maintain an internal environment that supports the function of cells, allowing for efficient gas exchange and overall homeostasis.",1,64,0.413,0.605,1,[],[]
+What occurs when the immune system attacks a harmless substance that enters the body from the outside?,"the immune system responds to foreign substances, also referred to as antigens, through a complex process called an immunological response. in the case of a harmless substance entering the body, such as a food protein or a pollen particle, the immune system may still mount an immune response due to the perceived threat. this response involves several steps, including recognition of the antigen by specific receptors on immune cells (b and t cells), activation of immune cells, production of antibodies, and ultimately eliminating the antigen from the body. however, if the antigen is truly harmless and does not cause any damage, the immune response may eventually subside without causing any significant harm to the host.
+    
+    ### references:
+    1. janeway ca jr, et al. immunobiology. 7th ed. new york: garland science; 2005.
+    2. cooper gm, albers rk. immunity: molecules, cells, and protective response. 3rd ed. new york: mcgraw hill; 2004.",0,43,0.389,0.589,1,"[Document(id='c3a556f0-aae9-49ac-abe4-ce3b3e544619', metadata={'source': '/content/ul-fri-nlp-course-project-2024-2025-drop-table-teams/data/Schutz2008/Schutz2008/docsutf8/Mol_Cell_Biochem-4-1-2226060.txt'}, page_content='Immunocytochemistry')]",[]
+"Fertilization is the union of a sperm and egg, resulting in the formation of what?","the fertilization of a gamete (either an ovum or a sperm) results in the formation of a zygote, which is the initial cell in the development of a multicellular organism. this event marks the beginning of embryonic development, leading to the growth of a fetus inside the uterus during pregnancy. in humans, this process occurs primarily in the fallopian tubes.
+
+    references:
+    [1] alberts, b., johnson, a., lewis, j., raff, m., roberts, k., & walter, p. (2002). molecular biology of the cell. garland science.
+    [2] moore, k. l. (2018). the developing human: clinically oriented embryology (pdf). elsevier health sciences.
+    [3] national institutes of health. (2021). human development: before birth. retrieved february 6, 2023, from https://medlineplus.gov/ency/article/002345.htm",1,100,0.316,0.739,1,[],[]
+The plants alternation between haploid and diploud generations allow it to do what?,"the alternation of generations in plants, specifically between haploid (gametophyte) and diploid (sporophyte), facilitates sexual reproduction and allows for the transfer and mixing of genetic material between individuals. this process maintains genetic diversity within plant populations and enhances their ability to adapt to changing environments.
+
+    during meiosis in the diploid sporophyte generation, homologous chromosomes separate, resulting in four haploid nuclei. one of these nuclei becomes the megaspore, which develops into the female gametophyte, or archeonium. another haploid nucleus forms the microspore, which develops into the male gametophyte, or antheridium.
+
+    sexual reproduction occurs when sperm from the antheridia fuse with eggs from the archeonia, creating zygotes. these zygotes then undergo mitosis, forming diploid sporophytes through the process of embryogenesis. as a result, new genetically diverse organisms emerge from this life cycle.
+
+    references:
+    - campbell, n. a., reece, j. b., & mitchell, l. (2013). biology. pearson education, inc.
+    - lederberg, j., & lederberg, e. m. (eds.). (2001). genetics. w.h. freeman.
+    ```",0,50,0.542,0.769,0,[],[]

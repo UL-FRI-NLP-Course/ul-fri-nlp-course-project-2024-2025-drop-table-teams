@@ -1,0 +1,144 @@
+question,chatbot_response,exact_match,fuzzy_score,sim_to_correct,sim_to_support,correct_beats_distractors,source_docs,filtered_docs
+What type of organism is commonly used in preparation of foods such as cheese and yogurt?,"the type of organisms commonly used in the preparation of foods such as cheese and yogurt belong to the domain bacteria and consist of specific strains of lactic acid bacteria (lab). these microorganisms ferment sugars present in milk, resulting in the production of lactic acid which contributes to the characteristic taste, texture, and preservation of these dairy products (1). commonly used lab strains include *lactococcus*, *leuconostoc*, *streptococcus thermophilus* and *lactobacillus*.
+
+    1. o'sullivan, d., & fitzgerald, g. f. (2019). microbiology of dairy products ii: microbial spoilage and control measures. international journal of food science and technology, 54(9), 3467-3482.
+    ```",0,65,0.333,0.314,1,[],[]
+What phenomenon makes global winds blow northeast to southwest or the reverse in the northern hemisphere and northwest to southeast or the reverse in the southern hemisphere?,"the phenomenon causing global winds to blow generally from the northeast to southwest in the northern hemisphere and from the northwest to southeast in the southern hemisphere is known as the prevailing westerlies and easterlies. these wind patterns are driven primarily by the earth's rotation (coriolis effect) and large-scale temperature differences between the equator and the poles. in the northern hemisphere, the westerlies carry moisture from the atlantic and pacific oceans, while the easterlies bring hot, dry air from the surrounding continents. conversely, in the southern hemisphere, the westerlies transport moisture from the indian and pacific oceans towards antarctica, while the easterlies originate from the surrounding land masses.
+
+    the coriolis effect, resulting from the earth's rotation, causes winds to deflect counterclockwise in the northern hemisphere and clockwise in the southern hemisphere. this deflection influences the formation of large-scale wind systems, including the trade winds and the prevailing westerlies.
+
+    according to ipcc ar5 (2013), ""the atmospheric circulation patterns referred to here as 'prevailing westerlies' and 'easterlies' are the most prominent wind fields at mid-latitudes in both hemispheres."" additionally, the intergovernmental panel on climate change (ipcc) indicates that changes in the prevailing wind patterns can lead to significant climatic impacts, such as altered precipitation patterns, increased or decreased temperatures, and altered wind regimes.
+
+    ----------------------------------------------------------------------------------------
+    references:
+    - intergovernmental panel on climate change (ipcc). climate change 2013: the physical science basis. contribution of working group i to the fifth assessment report of the intergovernmental panel on climate change [stocker, t.f., d. qin, g.-k. plattner, m. tignor, s.k. allen, j. boschung, a. nauels, y. xia, v. bex and p.m. midgley (eds.)]. cambridge university press, 2013.
+    - global wind atlas. https://www.globalwindatlas.info/en/resources/articles/wind_circulation_patterns
+    - nasa's earth observatory. ""global wind patterns."" https://earthobservatory.nasa.gov/features/windcirc/page1.php",1,100,0.518,0.738,1,"[Document(id='0d5eb1a4-b0d3-4299-9cf6-5666b1aa4f1d', metadata={'source': '/content/ul-fri-nlp-course-project-2024-2025-drop-table-teams/data/fao30/fao30/docsutf8/ae080e00.txt'}, page_content='Hot dry wind blows from the southwest for about 40 to 60 days a year.')]",[]
+Changes from a less-ordered state to a more-ordered state (such as a liquid to a solid) are always what?,"the transformation of a substance from a less-ordered state to a more-ordered state, such as a liquid to a solid, is called a phase transition. phase transitions occur when the thermodynamic conditions, specifically temperature and pressure, change and the material transitions from one phase to another. the energy difference between the two phases is an important factor; endothermic phase transitions require energy input from the environment (for example, melting), while exothermic phase transitions release energy into the environment (freezing). it is essential to note that the process of a phase transition is reversible under constant conditions, meaning that the substance can transition between phases repeatedly without using additional energy.
+
+    in summary, phase transitions represent changes in the physical state of a substance due to alterations in thermodynamic conditions. these processes are fundamental to understanding various natural phenomena and play a significant role in numerous industrial applications.",1,100,0.414,0.72,1,[],[]
+What is the least dangerous radioactive decay?,"the term ""least dangerous"" can be misleading in the context of radioactive decay as all types of radioactive decays pose some level of risk. radioactive decay refers to the process by which an unstable atomic nucleus emits radiation to transform into a more stable nuclear configuration, releasing energy in the process. this energy can manifest as ionizing radiation (alpha, beta, gamma, or x-rays), which has the potential to cause damage to biological tissue if absorbed in large enough quantities.
+
+    however, certain modes of decay may release different types or amounts of radiation compared to others. for instance, alpha decay involves the emission of an alpha particle (consisting of two protons and two neutrons), which carries a higher amount of energy than a typical beta or gamma decay. on the other hand, beta decay includes the emission of an electron or positron particle, accompanied by a neutrino. while beta particles carry lower energies than alpha particles, they still represent a significant radioactive hazard due to their ability to ionize matter. gamma decay, on the other hand, refers to the emission of energetic photons, which can penetrate various materials and present a greater external hazard compared to alpha or beta particles.
+
+    to determine the 'least dangerous' radioactive decay, one might consider several factors, such as the type and amount of radiation released, the probability of decay events, and the efficiency of shielding materials to block specific types of radiation. ultimately, no single decay mode can be definitively declared the least dangerous, as this depends on the unique circumstances surrounding its use, storage, and disposal.
+
+    refer to international atomic energy agency (iaea) publication gs-g-1.2 for more comprehensive information on safety aspects related to radioactive materials and their decay products.
+
+    ```",1,36,0.542,0.775,0,[],[]
+Kilauea in hawaii is the world’s most continuously active volcano. very active volcanoes characteristically eject red-hot rocks and lava rather than this?,"kilauea, located in hawaii, is indeed one of the most active volcanoes globally. however, its eruptions primarily involve the effusion of relatively fluid basaltic lava, which is typically dark in color due to its mineral composition. in contrast, more explosive eruptions, such as those occurring at stratovolcanoes, produce red-hot fragments and ash. therefore, while kilauea does not typically eject red-hot rocks of the type suggested, its eruptions should not be dismissed as minor or unimpressive due to their distinctive nature.
+
+    references:
+    - sigurdsson, h., & olson, w. r. (1983). the evolution of the kilauea iki crater, hawaii. journal of volcanology and geothermal research, 25(4), 337-361.
+    - wilson, g. (1989). volcanic eruptions: an encyclopedia. academic press.
+    ```
+
+    ```
+    ```",0,77,0.171,0.435,0,[],[]
+"When a meteoroid reaches earth, what is the remaining object called?","upon entering the earth's atmosphere, a meteoroid becomes a meteor. once it reaches the earth's surface, it is referred to as a meteorite. this nomenclature change signifies the transition from an extraterrestrial particle to an impacted terrestrial entity.
+
+    ```
+    meteoroids are celestial bodies or particles originating outside of an astronomical body, such as planets or moons. they range in size from micrometers to several meters (bottke et al., 1997). during their journey through space, they remain as individual entities. however, upon entering a planetary atmosphere, they transform into meteors due to the frictional heating caused by atmospheric interaction. this glowing trail is commonly observed as a ""shooting star."" ultimately, those meteors that survive the atmospheric passage and reach the earth's surface become meteorites (asphaug & carpenter, 2001).
+
+    references:
+      asphaug, e., & carpenter, j. n. (2001). introduction to planetary science. cambridge university press.
+      bottke, w. f., binzel, r. p., & brown, d. l. (1997). terrestrial planet impact fluxes. icarus, 134(1), 83-99.
+    ```",1,78,0.565,0.776,1,[],[]
+What kind of a reaction occurs when a substance reacts quickly with oxygen?,"a substance that reacts quickly with oxygen typically undergoes an oxidation reaction. in this process, the substance loses electrons (or gains oxygen atoms) as it transfers electrons to the oxygen molecules. as a result, the substance may form oxides, which can appear as a color change, the release of gases, or a noticeable increase in temperature, depending on the specific reaction involved. here, i will provide examples of common oxidation reactions for better understanding.
+
+    for instance, consider the combustion of methane (ch4) in air:
+```
+    ch4 + 2o2 → co + 2h2o
+
+    in this case, methane (a hydrocarbon) acts as the reducing agent by transferring its electrons to the oxygen molecules (the oxidizing agent), forming carbon monoxide (co) and water (h2o). this reaction releases energy due to the exothermic nature of the reaction, resulting in the familiar flame we observe when we burn natural gas at home.
+
+    another example involves the oxidation of iron (fe) by oxygen:
+```
+    4fe + 3o2 → 2fe2o3
+
+    here, iron undergoes rusting when exposed to moisture and oxygen. the iron atoms lose electrons to the oxygen molecules, forming iron(iii) oxide (fe2o3). over time, this accumulated iron oxide forms a thick layer of rust that protects the underlying metal from further corrosion.
+
+    these examples illustrate how substances can rapidly react with oxygen through oxidation processes. keep in mind that various factors, such as catalysts, pressure, and temperature, influence the rate and extent of oxidation reactions.",0,68,0.526,0.675,1,[],[]
+"Organisms categorized by what species descriptor demonstrate a version of allopatric speciation and have limited regions of overlap with one another, but where they overlap they interbreed successfully?.","several population genetic studies have contributed significantly to our understanding of the genetic structure and adaptive significance of incipient species. here are some notable examples:
+
+    1. [slatkin, m. (1993)](https://scholar.google.com/scholar?hl=en&as_sdt=0%2c3&q=slatkin+incipient+species): slatkin, m. (1993). genetic methods for the study of speciation and hybridization. annual review of ecology and systematics, 24(1), 17-38. this work delves into the application of various population genetics techniques for studying the process of incipient speciation.
+    2. [nosil, p. (2005)](https://scholar.google.com/scholar?hl=en&as_sdt=0%2c3&q=nosil+incipient+species): nosil, p. (2005). hybridization, gene flow, and the origin of new species. american naturalist, 166(3), 408-419. nosil discusses how hybridization and gene flow play crucial roles in shaping the genetic landscape during the early stages of speciation.
+    3. [rosenberg, a., cornuet, j. m., & charlesworth, b. (1989)](https://scholar.google.com/scholar?hl=en&as_sdt=0%2c3&q=rosenberg+incipient+species): rosenberg, a., cornuet, j. m., & charlesworth, b. (1989). genetic differentiation at the molecular level among populations of drosophila simulans. genetics, 122(1), 157-170. this study analyzed the genetic relationships among populations of *drosophila simulans* using mitochondrial dna markers, providing insights into the initial stages of speciation.
+
+    these studies help shed light on the intricacies of incipient species formation, enabling researchers to better understand the processes leading to the emergence of new species.",0,75,0.298,0.566,0,"[Document(id='735d0ad0-c20d-4670-a552-4e3eb82ed1f8', metadata={'source': '/content/ul-fri-nlp-course-project-2024-2025-drop-table-teams/data/SemEval2017/SemEval2017/docsutf8/S002231151500032X.txt'}, page_content='containing species [11,12].')]",[]
+Alpha emission is a type of what?,"alpha emission is a type of radioactive decay. this process involves the emission of an alpha particle (consisting of two protons and two neutrons) from the nucleus of an unstable atomic nucleus. the resulting daughter nucleus typically has a mass number lower than that of the parent nucleus and may undergo additional decays until stable. alpha decay often leads to a change in the element's atomic number due to the emission of an alpha particle, as indicated by the nuclear equation: a(parent) → b(daughter) + α.
+
+    references:
+        1. geesaman, d. f., & seaborg, g. t. (2012). nuclear physics. springer science & business media.
+        2. serway, r. a., & jewett, j. m. (2013). physics for scientists and engineers (8th ed.). cengage learning.",0,77,0.306,0.76,0,[],[]
+What is the stored food in a seed called?,"the term'seed' itself refers to a small embryonic plant enclosed in a protective outer covering. the stored food within a seed is typically referred to as the seed's endosperm or cotyledon. the endosperm is a triploid tissue derived primarily from the seed parent and serves as a nutrient reserve for the developing embryo. however, in some seeds such as cereal grains, the endosperm is largely consumed during germination, leaving only a thin layer around the embryo (scelerotesta). in contrast, the cotyledon is an enlarged embryonic leaf that stores nutrients and is often visible in seeds of many dicot plants. it is essential to note that the specific composition of the stored food varies depending on the type of seed.",1,100,0.432,0.812,1,"[Document(id='06385617-5d3e-4d45-9147-6be4377a8bbe', metadata={'source': '/content/ul-fri-nlp-course-project-2024-2025-drop-table-teams/data/fao780/fao780/docsutf8/r4807e.txt'}, page_content='silage. It is clear that during')]",[]
+"Zinc is more easily oxidized than iron because zinc has a lower reduction potential. since zinc has a lower reduction potential, it is a more what?","given the context, if we assume that ""what?"" refers to the role as an oxidizing agent, then according to the provided excerpt, zinc can be considered a more effective oxidizing agent due to its lower reduction potential compared to iron (adcp, 1983).",0,50,0.278,0.368,1,"[Document(id='be3d9ffd-e1b7-44a5-aa9e-10fa8b91d3fb', metadata={'source': '/content/ul-fri-nlp-course-project-2024-2025-drop-table-teams/data/fao780/fao780/docsutf8/r4807e.txt'}, page_content='oxidation by direct electron transfer in redox reactions, whereas Zn induces the breakdown of hydro-peroxides to free radicals (ADCP, 1983).')]",[]
+What is controlled by both genes and experiences in a given envionment?,"the interplay between genetics and environmental experiences is a complex phenomenon, which has been studied extensively in various fields of biology and psychology. one area where this interaction is particularly evident is epigenetics, the study of heritable changes in gene expression patterns without alterations to the underlying dna sequence (bird, 2007). epigenetic modifications, such as dna methylation and histone modifications, can be influenced by both genetic factors and environmental exposures (franklin & dale, 2014). for instance, it has been shown that certain environmental stressors, such as maternal care during early development, can lead to epigenetic modifications that influence the expression of genes related to stress response and neurodevelopment (meaney & szyf, 2010). similarly, genetic variations may affect an individual's susceptibility to environmental influences, altering the magnitude or direction of epigenetic changes in response to specific experiences (weaver et al., 2004). thus, both genes and experiences play crucial roles in shaping the epigenetic landscape, which, in turn, influences gene expression and overall organismal development.
+
+    references:
+        bird, a. (2007). epigenetics: a perspective on the nature of gene action. nature reviews genetics, 8(3), 191-202.
+        franklin, s. e., & dale, n. t. (2014). epigenetics and developmental plasticity. development, 141(15), 2679-2689.
+        meaney, m. f., & szyf, m. (2010). epigenetic mechanisms mediating the effect of maternal care on hippocampal neurodevelopment and adult behavior. nature reviews neuroscience, 11(1), 16-27.
+        weaver, i. c., meaney, m. f., & szyf, m. (2004). early life experience alters the expression of glucocorticoid receptors in the rat brain and hippocampus: implications for neurodevelopment, stress response and disease risk. european journal of neuroscience, 20(7), 1827-1837.
+    
+    ```
+    
+    ```",0,44,0.273,0.509,1,[],[]
+What tells you how much of the food you should eat to get the nutrients listed on the label?,"the amount of food needed to consume the daily recommended nutrient intake as listed on food labels depends on factors such as age, sex, physical activity level, and overall health status. these recommendations are typically based on average dietary needs for a healthy adult population. therefore, to determine how much of a specific food item is required to meet these recommendations, one would multiply the serving size listed on the food label by the percentage of the daily value (%dv) for each nutrient of interest. for example, if an individual requires 2500 calories per day and a food item contains 10% dv for fiber per serving, then consuming two servings of that food item would provide the daily recommended amount of fiber based on this caloric intake. it is important to note that individual nutritional requirements may vary, and consulting a healthcare professional or registered dietitian can help individuals establish personalized nutrition goals and meal plans.
+
+    sources:
+    1. usda. (n.d.). dietary reference intakes. retrieved september 8, 2022, from https://www.myplate.gov/nutritionfacts/dailyvalue.html
+    2. academy of nutrition and dietetics. (n.d.). position of the academy of nutrition and dietetics: healthy eating patterns. journal of the academy of nutrition and dietetics, 117(1), 1-10. https://doi.org/10.1016/j.jad.2016.09.031",1,100,0.449,0.645,1,[],[]
+What are used to write nuclear equations for radioactive decay?,"nuclear equations for radioactive decay describe the changes in atomic nuclei during radioactive decay processes. these equations include the initial nuclide (parent), the final nuclide (daughter), and any particles or energy released during the decay process. the notation typically follows the following template:
+
+    `a -> b + x`
+
+    where 'a' represents the parent nuclide, 'b' represents the daughter nuclide, and 'x' represents the particle(s) or energy released during the decay process. for example, the decay of uranium-238 to lead-206 is represented by the equation:
+
+    `238u -> 206pb + α + 4n`
+
+    where the alpha particle represents helium-4, and the neutrons represent the four neutrons produced during the decay process. this equation describes the decay of the initial nuclide, uranium-238, into the final nuclide, lead-206, along with the emission of an alpha particle and four neutrons.",0,60,0.49,0.751,0,[],[]
+What is controlled by regulatory proteins that bind to regulatory elements on dna?,"regulatory proteins play a crucial role in controlling gene expression by binding to specific regulatory elements on dna. these elements include enhancers, silencers, promoters, and operator regions. the interaction between regulatory proteins and their target dna sequences modulates transcriptional activity, either activating or repressing gene expression as needed. for instance, transcription factors bind to enhancer sequences upstream of a gene to stimulate its transcription, while repressors may bind to silencer sequences downstream to inhibit transcription. in summary, regulatory proteins control gene expression by selectively binding to cis-acting elements on dna, which in turn influences the recruitment of rna polymerase and other transcription machinery to the promoter region.
+
+    references:
+    1. alberts b., johnson a., lewis j., raff m., roberts k., & walter p. (2002). molecular biology of the cell. garland science.
+    2. grishok m. c., & struhl g. (1996). transcriptional regulation: how regulators find their targets. nature, 381(6579), 147-153.
+    3. ptashne m. (1987). gene regulation by the cre and looped operator systems of lambda phage. annual review of genetics, 21, 193-223.",0,44,0.595,0.782,1,[],[]
+Boron only occurs naturally in compounds with what element?,"boron is a chemical element with the symbol b and atomic number 5. it only occurs naturally in inorganic compounds, primarily borates (such as borax, kernite, and boracite) and borides (such as dicalcium boride and triboron silicide). in organisms, it exists mainly as boric acid or its salts. no definitive statement can be made about which specific element boron occurs exclusively with in nature as it is always found bound with other elements due to its non-metallic properties.
+
+    sources:
+    1. ""boron."" encyclopedia britannica, en.britannica.com/science/boron.
+    2. ""boron compounds: uses, side effects, interactions, dosage, warning."" webmd, www.webmd.com/drugs/drug-overview/a-z-list-boron-compounds.
+    3. ""boron."" pubchem, pubchem.ncbi.nlm.nih.gov/element/61709.
+    ```",0,50,0.197,0.77,1,[],[]
+What organ systems link exchange surfaces with cells throughout the body?,"the organ systems primarily responsible for providing exchange surfaces between the external environment and cells throughout the body are the respiratory system, which facilitates gas exchange, and the circulatory system, which enables the transportation of nutrients, wastes, and signaling molecules between cells and the exterior.
+
+    the respiratory system, composed of the lungs and other associated structures such as the trachea and diaphragm, plays a crucial role in exchanging gases (primarily oxygen and carbon dioxide) between the external environment and the bloodstream via a process called diffusion. this exchange occurs in the alveoli, where the thin membrane separating the air inside the lungs from the capillaries allows for rapid transfer of gases.
+
+    in contrast, the circulatory system provides a network of channels through which various substances can be transported to different locations in the body. specifically, the cardiovascular system transports blood, while the lymphatic system handles lymph. the cardiovascular system consists of the heart and a closed circulatory loop formed by arteries, veins, and capillaries. the heart pumps blood through this loop to deliver oxygen and nutrients to tissues and pick up waste products. the exchange of materials occurs at the capillary level as substances diffuse across the capillary wall into the interstitial fluid surrounding the cells or directly into the cells themselves.
+
+    together, the respiratory and circulatory systems form an intricate network that links exchange surfaces with cells throughout the body, enabling life-sustaining processes such as gas exchange and nutrient transportation.",1,100,0.42,0.645,1,[],[]
+What occurs when the immune system attacks a harmless substance that enters the body from the outside?,"when the immune system encounters a harmless substance, such as a food protein or a pollen particle, it may mount an immune response through a process called immunization or sensitization. this response involves the production of antibodies to recognize and neutralize the substance in future encounters, creating an adaptive immune response. however, upon first exposure, the immune response can sometimes result in inflammation, causing symptoms such as redness, swelling, itching, and pain at the site of contact. this reaction is known as an allergic response and is a normal part of the immune system's response to foreign substances (haptens) when they enter the body. the immune system mistakes these harmless substances for pathogens and activates complement proteins, releases pro-inflammatory cytokines, and recruits immune cells to the site of entry to eliminate the perceived threat.
+
+    ### references:
+    1. janeway ca jr., travers p, walmsley c, et al. immunobiology. 6th ed. new york, ny: garland science; 2005.
+    2. cooke m, milner j. allergy: molecular recognition of antigens. cold spring harbor perspectives in biology. 2013.
+    3. ackerman d. allergies and intolerances. merck manual professional version. 2021. accessed on march 7, 2023. [https://www.merckmanuals.com/professional/immunology/immune-disorders/allergies-and-intolerances](https://www.merckmanuals.com/professional/immunology/immune-disorders/allergies-and-intolerances)
+    4. sánchez-borges m, marín-felix m, casanueva ff. immunological mechanisms involved in food allergy: from th1/th2 imbalance to the role of th17 cells. journal of allergy and clinical immunology. 2018;142(suppl_1):s21-s28.e1.",1,43,0.597,0.693,1,"[Document(id='c3a556f0-aae9-49ac-abe4-ce3b3e544619', metadata={'source': '/content/ul-fri-nlp-course-project-2024-2025-drop-table-teams/data/Schutz2008/Schutz2008/docsutf8/Mol_Cell_Biochem-4-1-2226060.txt'}, page_content='Immunocytochemistry')]",[]
+"Fertilization is the union of a sperm and egg, resulting in the formation of what?","<p>fertilization is the process by which two gametes, one from each parent, unite to form a zygote, which then develops into a multicellular organism called an embryo or fetus. the zygote is the first cell of a new individual, which starts growing and dividing through mitosis.</p>
+
+    <p>additionally, it is important to note that fertilization occurs in different ways depending on the species. in humans, fertilization occurs internally, while in some other animals it occurs externally (e.g., sea urchins).</p>
+
+    <p>references:</p>
+    <ul>
+        <li><a href=""https://www.ncbi.nlm.nih.gov/books/nbk27928/"" target=""_blank"">gametogenesis, fertilization, and early embryonic development</a></li>
+        <li><a href=""https://www.nature.com/articles/nrc3615"" target=""_blank"">the biology of human reproduction</a></li>
+    </ul>
+```",1,100,0.324,0.81,1,[],[]
+The plants alternation between haploid and diploud generations allow it to do what?,"the process you refer to is known as alternation of generations, which is a fundamental feature of the life cycle of many organisms including plants. in the context of plant biology, this alternation allows for the separation of sexual (diploid) and asexual (haploid) phases. this dichotomous life cycle enables plants to combine genetic variation through sexual reproduction while maintaining the potential for rapid vegetative growth and clonal propagation through asexual means.
+
+    during the sexual phase, diploid spores (either microspores or megaspores depending on the spermatophyte plant species) undergo meiosis, resulting in haploid cells. these haploid cells then develop into gametophytes. sexual reproduction occurs via fusion of two haploid gametes, creating a zygote. subsequent mitotic divisions result in a diploid embryo, which eventually develops into a seed or other protective structure. this diploid structure then undergoes germination, leading to the development of a new diploid individual.
+
+    in contrast, during the asexual phase, haploid spores (usually in the form of apomesospores) undergo mitosis, generating multiple identical haploid cells. these cells then grow into new haploid individuals, allowing for clonal propagation and vegetative expansion.
+
+    thus, the alternation of generations in plants allows for both genetic diversity through sexual reproduction and the ability to reproduce rapidly and maintain large populations via asexual means.",0,50,0.613,0.823,0,[],[]

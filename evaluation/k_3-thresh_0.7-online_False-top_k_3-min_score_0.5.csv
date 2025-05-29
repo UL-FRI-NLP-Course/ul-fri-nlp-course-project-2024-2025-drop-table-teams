@@ -1,0 +1,168 @@
+question,chatbot_response,exact_match,fuzzy_score,sim_to_correct,sim_to_support,correct_beats_distractors,source_docs,filtered_docs
+What type of organism is commonly used in preparation of foods such as cheese and yogurt?,"the common organisms used in food preparation, particularly in the production of cheese and yogurt, belong to the lactic acid bacteria (lab) group and include species such as lactococcus, streptococcus thermophilus, and lactobacillus bulgaricus. these bacteria ferment lactose in milk into lactic acid, which is essential for coagulating milk proteins and producing the characteristic textures and flavors of various dairy products.
+
+    
+    ```
+    lactococcus lactis is a gram-positive facultatively anaerobic coccus commonly used in the production of cheeses such as cheddar, monterey jack, and mozzarella through its ability to produce proteolytic and lipolytic enzymes during cheese ripening. it contributes to the flavor development process and facilitates syneresis (the separation of whey from curd).
+
+    streptococcus thermophilus is another notable lactic acid bacterium used primarily in the production of yogurt and other fermented dairy products due to its ability to survive under high temperatures. its metabolism generates carbon dioxide, which creates the characteristic bubbles found in yogurt and helps maintain the proper acidity level, creating a smooth and creamy texture.
+
+    lactobacillus bulgaricus is also widely used in dairy product manufacturing, where it works synergistically with s. thermophilus. this bacterium is responsible for providing the acidity required for casein precipitation and also contributes to the flavor profile, especially in bulgarian yogurt.
+
+    ```
+
+    in summary, the specified lab strains play crucial roles in shaping the flavor, texture, and nutritional properties of cheese and yogurt, making them indispensable organisms in dairy technology.",0,60,0.341,0.34,1,[],[]
+What phenomenon makes global winds blow northeast to southwest or the reverse in the northern hemisphere and northwest to southeast or the reverse in the southern hemisphere?,"the phenomena causing large-scale prevailing winds, known as the trade winds and westerlies, are primarily driven by temperature differences between equatorial and polar regions due to earth's uneven heating. these winds rotate counterclockwise in the southern hemisphere (northwest to southeast) and clockwise in the northern hemisphere (easterly trade winds: east to northeast and westerlies: west to northwest). the coriolis effect, resulting from earth's rotation, influences wind direction but plays a secondary role in establishing wind patterns.
+
+    in more detail, the hadley cells in each hemisphere create the major wind systems. strong solar heating at the equator causes rising air masses, creating an area of low pressure below. surrounding this region is an area of higher pressure, forcing the air to move away from the equator towards the poles. as the air rises, it cools and condenses into clouds, forming precipitation zones along its path. at the same time, the sinking air near the poles creates areas of high pressure, pulling air from adjacent lower-pressure regions towards the poles. this process creates the general circulation pattern of winds observed globally.",1,100,0.512,0.695,1,"[Document(id='0d5eb1a4-b0d3-4299-9cf6-5666b1aa4f1d', metadata={'source': '/content/ul-fri-nlp-course-project-2024-2025-drop-table-teams/data/fao30/fao30/docsutf8/ae080e00.txt'}, page_content='Hot dry wind blows from the southwest for about 40 to 60 days a year.')]",[]
+Changes from a less-ordered state to a more-ordered state (such as a liquid to a solid) are always what?,"the changes from a less-ordered state to a more-ordered state, such as a liquid to a solid, are called phase transitions. these transitions are not always exothermic or endothermic; they can be either depending on the specific substance involved. for instance, during a solidification process, heat is often released (an exothermic reaction), but some substances, like water, release heat when freezing and absorb it when melting, resulting in an endothermic effect. therefore, it is essential to investigate the particular substance under consideration to ascertain whether the phase transition is accompanied by heat absorption or release.
+
+    to gain a deeper understanding of this concept, let us explore some primary sources regarding phase transitions and their associated thermodynamic properties.
+
+    1. [fick, f., & cummings, j. w. (2007). thermodynamics of phase transitions. journal of chemical education, 84(9), 1535-1540.](https://www.sciencedirect.com/science/article/abs/pii/s002196810700211x)
+    in this article, fick and cummings provide a comprehensive overview of the thermodynamics of phase transitions, discussing concepts related to heat capacity, enthalpy, entropy, and gibbs free energy.
+
+    2. [deming, l. a. (1982). thermodynamics of melting and freezing. annual review of physical chemistry, 33, 439-466.](https://www.jstor.org/stable/physchem.33.439)
+    deming discusses the thermodynamics of melting and freezing in detail, including the importance of latent heat and the relationship between temperature and entropy during phase transitions.
+
+    by examining these scholarly resources, you will expand your knowledge base and gain a more profound comprehension of phase transitions and their thermodynamic implications.",1,100,0.405,0.706,1,[],[]
+What is the least dangerous radioactive decay?,"the term ""least dangerous radioactive decay"" is not well-defined within the context of nuclear physics or radiation safety. radioactive decay refers to the process by which an unstable atomic nucleus emits particles or radiation to transform into a more stable configuration. each decay mode, such as alpha (α), beta (-β), or gamma (γ) emission, carries its own risks due to the properties of the emitted particles and radiation.
+
+    α decay involves the emission of an alpha particle (consisting of two protons and two neutrons) and can result in significant ionization densities and a substantial increase in radioactivity due to the production of daughter nuclei. 
+
+    β decay can occur via beta-plus (positron) or beta-minus (electron) emissions, each resulting in different hazards. positron emission may lead to the production of positron annihilation radionuclides, while electron emission can create electromagnetic fields through interaction with magnetic fields. additionally, decays involving the transformation of neutron-rich isotopes into proton-rich ones (β+ decay) produce radioactive daughter nuclei that undergo subsequent decays, potentially creating complex decay chains.
+
+    γ decay refers to the emission of high-energy photons, which pose risks through direct interaction with living tissue and the creation of secondary radiolytic products upon interaction with matter.
+
+    therefore, there is no single radioactive decay that can be considered ""least dangerous"" since all decay modes carry some level of risk depending on the specific properties of the decaying nuclide and the environment in which the decay occurs.
+
+    for a comprehensive understanding of radioactive decay hazards and mitigation strategies, extensive research on the specific isotope, decay modes, and related hazards is necessary.",0,55,0.62,0.731,1,[],[]
+Kilauea in hawaii is the world’s most continuously active volcano. very active volcanoes characteristically eject red-hot rocks and lava rather than this?,"kilauea in hawaii is indeed an actively erupting volcano, but its characteristic eruption style is primarily effusive rather than explosive. instead of ejecting large amounts of volcanic ash and red-hot rocks into the atmosphere as explosion-prone volcanoes such as mount st. helens or krakatoa do, kilauea emits relatively fluid lava from its summit and from numerous fissures along its eastern rift zone. this lava can flow freely down the volcano's slopes and enter the sea, forming new land or modifying existing coastline. the misconception likely arises because people may associate all volcanic activity with the explosive, destructive nature of some volcanoes, whereas kilauea represents the more common, subdued form of volcanic eruptions.",0,54,0.201,0.427,0,[],[]
+"When a meteoroid reaches earth, what is the remaining object called?","upon reaching the earth's surface, a meteoroid becomes a meteor and then, if it survives impact, a meteorite. therefore, the remaining object after its entry into the earth's atmosphere is referred to as a meteorite.
+
+    ### references:
+    - brownlee, d. (2015). meteorites and meteoritics: a very short introduction. oxford university press.
+    - wasson, j. t., & scott, h. m. (2013). meteorites and their sources. cambridge university press.
+    
+    ```",1,78,0.613,0.762,1,[],[]
+What kind of a reaction occurs when a substance reacts quickly with oxygen?,"a substance that reacts quickly with oxygen typically undergoes an oxidation reaction. in oxidation reactions, electrons are transferred from one molecule to another, often resulting in the formation of new chemical bonds between the reactants. this process can lead to significant changes in the physical or chemical properties of the substances involved. for example, some metals may form oxides (metal oxides) when they react with oxygen, while organic compounds may form peroxides or other oxidized derivatives. in general, oxidation reactions can lead to increased stability, enhanced reactivity, or the formation of more complex structures, depending on the specific reactants and conditions.
+
+    some common oxidizing agents include oxygen gas itself, as well as various inorganic and organic compounds such as hydrogen peroxide, nitrates, permanganates, chlorates, bromates, and iodates. these agents have the ability to accept electrons from other molecules and promote oxidation processes.
+
+    it's important to note that the exact nature of the reaction depends on the specific reactants involved, as different substances may follow distinct reaction mechanisms and pathways during oxidation. additionally, the presence of catalysts, solvents, temperature, pressure, or other external factors can influence the outcome of the reaction.
+
+    ```
+    
+    ```
+
+    in summary, when a substance reacts quickly with oxygen, an oxidation reaction typically ensues, which involves the transfer of electrons and the formation of new chemical bonds between the reactants. the type and extent of the reaction depend on the specific reactants and the environmental conditions present.",0,53,0.356,0.478,1,[],[]
+"Organisms categorized by what species descriptor demonstrate a version of allopatric speciation and have limited regions of overlap with one another, but where they overlap they interbreed successfully?.","the process of hybridization leading to the formation of a new species is often referred to as ""hybrid speciation."" this phenomenon occurs when the hybrids generated from the interbreeding of two parental species acquire novel traits that enable them to establish and maintain a separate population [1]. these traits can arise through various mechanisms, including chromosome rearrangement, gene flow, and mutation [2]. furthermore, hybridization can lead to the development of reproductive isolation mechanisms, preventing hybrids from interbreeding with either of the original parental species [3]. however, for successful speciation through hybridization to occur, several conditions must be met:
+
+    1. **hybrid viability:** the hybrids must be able to survive and reproduce. otherwise, they will not be able to establish a new population.
+    2. **reduced gene flow:** there must be a reduction in gene flow between the parental species. this can be achieved through various mechanisms, such as geographical separation or behavioral differences.
+    3. **natural selection:** the hybrid population must undergo natural selection and develop unique adaptations that distinguish it from both parental species. this can include the fixation of hybrid-specific alleles or the development of new morphological, physiological, or behavioral traits.
+    4. **reinforcement of reproductive isolation:** reproductive barriers must develop between the hybrid population and both parental species to prevent interbreeding and maintain genetic distinctiveness.
+
+    references:
+    [1] rice, s. b., & holland, j. (2004). hybridization and speciation in plants. annual review of ecology, evolution, and systematics, 35(1), 565-603.
+    [2] rieseberg, l. h., & willis, k. j. (2007). adaptation, gene flow, and speciation: insights from plant hybrid zones. annual review of ecology, evolution, and systematics, 38, 293-317.
+    [3] abbott, s. n., arnold, m., & johnson, d. w. (2003). evolutionary consequences of hybridization: gene flow, heterosis, and evolution. annual review of ecology, evolution, and systematics, 34(1), 283-310.",0,75,0.238,0.562,0,"[Document(id='735d0ad0-c20d-4670-a552-4e3eb82ed1f8', metadata={'source': '/content/ul-fri-nlp-course-project-2024-2025-drop-table-teams/data/SemEval2017/SemEval2017/docsutf8/S002231151500032X.txt'}, page_content='containing species [11,12].')]",[]
+Alpha emission is a type of what?,"alpha emission is a type of radioactive decay. in alpha decay, an atomic nucleus emits an alpha particle, which consists of two protons and two neutrons. this process leads to a decrease in the mass number (a) and atomic number (z) of the radioactive nucleus, resulting in the formation of a new element. for example, uranium-238 undergoes alpha decay to form thorium-234. the equation for alpha decay can be represented as follows:
+
+    ```
+    ^{a}_{z}x → ^{a-4}_{z-2}y + ^{4}_{2}he
+    ```
+
+    this reaction results in the ejection of an alpha particle from the nucleus of the parent atom, accompanied by a decrease in both mass and atomic number for the daughter nucleus. alpha decay plays a significant role in nuclear physics and radiocarbon dating applications.",0,77,0.378,0.748,0,[],[]
+What is the stored food in a seed called?,"the term ""seed"" itself refers to a small embryonic plant enclosed in a protective covering, which is often called the seed coat. this structure allows the plant to germinate and grow once conditions are favorable. in agriculture and food science, seeds may also be used as ingredients for certain foods or feedstuffs, such as soybeans or sunflower seeds. however, it seems there has been some confusion between seeds and other stored food products in the given context.
+
+    regarding the statement ""what is the stored food in a seed called?"" - seeds themselves are indeed a form of food storage, but they do not fit the description in the context as they are living organisms and not inanimate objects. instead, the question appears to be addressing another type of stored food, specifically mentioned later in the text as ""silage."" silage is a fermented crop material, typically made from maize (corn) or grasses, which is preserved as animal feed. therefore, the term ""silage"" would be the most accurate answer to the original question.",0,44,0.04,0.666,0,"[Document(id='06385617-5d3e-4d45-9147-6be4377a8bbe', metadata={'source': '/content/ul-fri-nlp-course-project-2024-2025-drop-table-teams/data/fao780/fao780/docsutf8/r4807e.txt'}, page_content='silage. It is clear that during')]",[]
+"Zinc is more easily oxidized than iron because zinc has a lower reduction potential. since zinc has a lower reduction potential, it is a more what?","since zinc has a lower reduction potential compared to iron (as mentioned in adcp, 1983), it can be considered as a more reducing agent in redox reactions. however, it's important to note that this doesn't mean zinc gets oxidized easier per se; instead, it implies that zinc can donate electrons more readily during oxidation processes. in the context given, the primary differences between zinc and iron oxidation mechanisms were outlined: while iron undergoes oxidation through indirect electron transfer, zinc induces the breakdown of hydro-peroxides via direct electron transfer.",0,42,0.224,0.521,1,"[Document(id='be3d9ffd-e1b7-44a5-aa9e-10fa8b91d3fb', metadata={'source': '/content/ul-fri-nlp-course-project-2024-2025-drop-table-teams/data/fao780/fao780/docsutf8/r4807e.txt'}, page_content='oxidation by direct electron transfer in redox reactions, whereas Zn induces the breakdown of hydro-peroxides to free radicals (ADCP, 1983).')]",[]
+What is controlled by both genes and experiences in a given envionment?,"the interaction between genes and environment, also known as gene-environment interaction (gxe), plays a significant role in determining various phenotypic traits in organisms. both genes and experiences influence the development of complex traits, which may include behavioral, cognitive, and health outcomes. a classic example can be seen in the field of epigenetics, where dna methylation patterns are modifiable based on environmental influences and can in turn affect gene expression.
+
+    for instance, the monoamine oxidase a (maoa) gene has been linked to aggressive behavior. a functional polymorphism exists in this gene, leading to two variants: low-activity (l) and high-activity (h). research suggests that individuals carrying the l allele are more susceptible to the negative effects of childhood maltreatment (caspi et al., 2002). furthermore, studies have shown that maltreatment can alter the maoa gene's regulation via dna methylation, enhancing the association between the l allele and aggressive behavior (caspi et al., 2004). thus, both genetic factors (gene variant) and environmental experiences (childhood maltreatment) contribute to the emergence of aggressive behavior.
+
+    in conclusion, an organism's phenotype can be shaped by both its genome and its experiences within a given environment. gene-environment interactions can result in a wide range of phenotypes, depending on the specific combination of genetic and experiential factors.
+
+    ### references:
+    caspi, a., sugden, k., smith, m., holmes, j., arsenault, l., mcclay, i., mill, t., martin, j., meliefste, m., van der meulen, r., wheeler, e., hodgins, d., boyce, w., foley, d., daniels, a., o'connor, t., craig, i., and moffitt, t. (2002). influence of childhood maltreatment on adult criminality and substance abuse: longitudinal analysis of a birth cohort. science, 296(5571), 851-854.
+    
+    caspi, a., et al. (2004). inconsistency between maternal reports and objective assessments of child maltreatment: implications for research on gene–environment interactions. development and psychopathology, 16(1), 31–48.
+
+    ```",0,69,0.309,0.459,1,[],[]
+What tells you how much of the food you should eat to get the nutrients listed on the label?,"the serving sizes listed on nutrition labels provide a reference for understanding the amount of a food that delivers a specific set of nutrients as stated on the label. these serving sizes are standardized amounts based on typical consumption and do not necessarily reflect individuals' specific caloric needs or dietary requirements. consuming more or less than the stated serving size will result in varying intake of the corresponding nutrient content. for instance, if an individual consumes twice the amount of a food item listed as one serving, they would take in double the amount of calories and nutrients stated on the label. it is essential to consider personal dietary goals and consult a healthcare professional or registered dietitian to determine appropriate portion sizes for maintaining or achieving specific health objectives.",1,100,0.652,0.746,1,[],[]
+What are used to write nuclear equations for radioactive decay?,"nuclear equations for radioactive decay are typically written using the following symbols and conventions:
+    
+    - the nucleus undergoing decay is represented by its atomic symbol (e.g., u-235).
+    - the decay product is denoted by its atomic symbol followed by the mass number (e.g., th-231).
+    - the emitted particle during decay is represented by its symbol (e.g., alpha particle: α or beta particle: β).
+      the subscripts '+' or '-' indicate whether the particles are emitted or absorbed, respectively.
+    - energy released during decay is shown as q or δe, representing the change in mass energy.
+    - the mass numbers of reactants and products are balanced on both sides of the equation.
+    
+    for example, the decay of uranium-238 to thorium-234 via an alpha decay can be written as:
+    
+    ```u-238 → th-234 + α + q```
+
+    here, the initial nucleus u-238 decays into the final nucleus th-234, releasing an alpha particle and energy.
+
+    in summary, nuclear equations for radioactive decay utilize standardized symbols, particles, and conventions to represent and describe various types of nuclear reactions.",0,60,0.562,0.85,0,[],[]
+What is controlled by regulatory proteins that bind to regulatory elements on dna?,"regulatory proteins, also known as transcription factors (tfs), control gene expression by binding to specific dna sequences called regulatory elements. these regulatory elements can be located in the promoter regions upstream of genes or in introns and untranslated regions (utrs) of the target genes. the interaction between tfs and their target regulatory elements can either activate or repress transcription of the bound gene.
+
+    there are several types of regulatory elements based on their function. enhancers and silencers are the most common ones. enhancers increase transcription of the target gene, while silencers decrease its transcription. promoters, on the other hand, initiate transcription and are typically located immediately upstream of the transcription start site (tss). other functional elements include insulators, which protect enhancers and silencers from each other's interference, and locus control regions (lcrs), which control the overall expression levels of large gene complexes.
+
+    the binding of tfs to specific motifs within these regulatory elements allows for fine-tuning of gene expression in response to various internal and external signals. for instance, cellular metabolites, growth factors, developmental signals, and stressors can modulate gene expression through alterations in tf activity and binding affinity. this adaptive mechanism enables cells to respond to changing environments, maintain homeostasis, and undergo differentiation processes during development.
+
+    in summary, regulatory proteins control gene expression by binding to specific regulatory elements on dna. these interactions modulate transcription initiation and allow for fine-tuning of gene expression in response to various internal and external signals.
+
+    ```
+    
+    ```",0,61,0.55,0.695,1,[],[]
+Boron only occurs naturally in compounds with what element?,"boron primarily occurs naturally in minerals as borates, which consist of boron trioxide (b2o3) or boric acid (h3bo3), combined with other elements such as oxygen, hydroxyl, and metals including calcium (ca), magnesium (mg), sodium (na), and aluminum (al). therefore, the primary element with which boron only occurs naturally is oxygen, due to its presence as a component of boron trioxide and boric acid.
+
+    however, it's essential to clarify that this statement does not mean that boron is always directly bonded to oxygen alone. instead, boron is found in nature mainly in the form of boron oxides and boron acid, which contain both boron and oxygen atoms.
+
+    for instance, one common mineral, borax (sodium borate, na2b4o7.10h2o), consists of a sodium ion, four boron ions, seven oxygen ions, and ten water molecules. in another mineral, kernite (potassium borate, k2b4o7.4h2o), potassium ions replace sodium ions in the borax crystal structure. moreover, boron can also occur naturally bound to nitrogen in boron-nitride materials. but most boron minerals are borates containing o, h, and often ca, mg, al, and na.",1,100,0.394,0.818,1,[],[]
+What organ systems link exchange surfaces with cells throughout the body?,"the organ systems primarily involved in connecting exchange surfaces with cells throughout the body are the respiratory system and the circulatory system.
+
+    the respiratory system facilitates the exchange of gases between the external environment and the internal bodily fluids through processes such as diffusion and active transport at the alveolar-capillary membrane. this ensures a constant supply of oxygen (o2) for cellular respiration and the removal of carbon dioxide (co2) as a waste product.
+
+    the circulatory system, specifically the cardiovascular system, plays a crucial role in distributing nutrients, hormones, and other essential substances to cells while removing wastes. it does this through the transportation of blood throughout the body via the heart and the network of arteries, veins, and capillaries. nutrient exchange occurs mainly at the capillary level, where the relatively thin walls allow the selective passage of substances between the blood and interstitial fluid.
+
+    in summary, both the respiratory and circulatory systems serve to link exchange surfaces with cells throughout the body, ensuring proper gas exchange, nutrient uptake, and waste removal.
+
+    ```
+    
+    
+    ```",1,100,0.43,0.667,1,[],[]
+What occurs when the immune system attacks a harmless substance that enters the body from the outside?,"the immune system mounts an immune response against foreign substances, such as antigens, that enter the body. this process, called immunization, is essential for protecting the body against pathogens and maintaining health. however, when the immune system encounters a harmless substance (an autoantigen), it can mistakenly identify it as a threat and launch an attack, leading to an autoimmune response.
+
+    in immunocytochemistry, which is a technique used to visualize and locate specific proteins, cells, or other molecular structures within cells, the use of exogenous antibodies or antigens may trigger an immune reaction, leading to the production of antibodies against the introduced material. this could potentially interfere with the analysis of the target molecule or cellular structure.
+
+    to minimize the risk of unwanted immune reactions during immunocytochemical analyses, several strategies can be employed, including:
+
+    * using non-immunogenic buffers and solutions.
+    * employing blocking reagents to prevent the binding of endogenous antibodies to the target antigens or structures.
+    * utilizing indirect detection methods to reduce the amount of exogenous antibodies that come into contact with the sample.
+    * implementing stringent control experiments to confirm the specificity of the primary and secondary antibodies used in the assay.
+
+    overall, while the immune system plays a crucial role in defending our bodies against potential threats, it is essential to maintain proper control over the immune response during laboratory techniques such as immunocytochemistry to ensure accurate and reliable results.",0,57,0.224,0.362,1,"[Document(id='c3a556f0-aae9-49ac-abe4-ce3b3e544619', metadata={'source': '/content/ul-fri-nlp-course-project-2024-2025-drop-table-teams/data/Schutz2008/Schutz2008/docsutf8/Mol_Cell_Biochem-4-1-2226060.txt'}, page_content='Immunocytochemistry')]",[]
+"Fertilization is the union of a sperm and egg, resulting in the formation of what?","the fertilized egg is called a zygote. once the zygote undergoes several rounds of cell division, it becomes an embryo. this embryo grows into a fetus during pregnancy, eventually leading to the birth of a live organism. therefore, the result of fertilization is a zygote, which develops into a multicellular organism.
+
+    here are some references to support this answer:
+    
+    - ""human reproduction: conception, embryology, and birth,"" h. c. lee, m. d. smith, and r. g. bleich (2015)
+        (<https://link.springer.com/chapter/10.1007%2f978-3-319-21642-1_1>)
+        
+    - ""developmental biology: a beginner’s guide,"" john w. sedgwick (2014)
+        (<http://www.ncbi.nlm.nih.gov/books/nbk9832/>)
+
+    these sources provide extensive information on the process of human reproduction and the development of a fertilized egg into a mature organism. they are reliable, peer-reviewed publications that offer detailed insights into the biological processes involved.",1,100,0.354,0.776,1,[],[]
+The plants alternation between haploid and diploud generations allow it to do what?,"the alternation of generations in plants allows for the transfer of genetic material from one generation to the next through sexual reproduction. in haploid gametophytic generations, meiosis occurs, producing haploid gametes (sperm and eggs). in diploid sporophytic generations, mitosis occurs, creating diploid spores which eventually give rise to new organisms through germination. this process ensures the continuity of species and the maintenance of genetic diversity.
+
+    it is important to note that the gametophyte and sporophyte generations are interconnected, with the sporophyte being dominant and usually more complex in structure. this arrangement allows for the protection and nourishment of the gametophyte during its brief existence and enables the plant to adapt to changing environmental conditions through the combination of genetic traits from both parents.
+
+    references:
+    - bowen, r. m., & smith, h. j. (1965). an introduction to plant physiology. cambridge university press.
+    - steward, f. a. (2002). angiosperms: evolution above the genus level. annual review of ecology, evolution, and systematics, 33(1), 275-312.
+    ```",0,44,0.426,0.816,0,[],[]
