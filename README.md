@@ -23,6 +23,6 @@ For our Natural Language Processing course group project, we are developing a co
 3. Download static dataset.
 
     `python -m src.dataset_scraping`
-4. Run model.
+4. Run app.
 
     `python -m src.app`
